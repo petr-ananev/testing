@@ -1,1 +1,1527 @@
-{"deploys":{"0c539644-d056-473f-9fdf-f830c90d0d3d":{"deployId":"0c539644-d056-473f-9fdf-f830c90d0d3d","changeDt":1712328618826,"diagram":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":"v.2024-04-05_17:44:16_deploy","versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":{"id":"1c7842e5-c75c-4c66-ada2-0c0e336c8ed8","objectId":"63e0730c-e0d5-4a08-a6e8-3652e18f2b0a","objectName":"New Diagram (Mnymv)"},"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","diagramId":"63e0730c-e0d5-4a08-a6e8-3652e18f2b0a","deployText":"{\n\t\"job\": {\n\t\t\"pipeline\": {\n\t\t\t\"sources\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"08ffe0d0-8d07-4204-b1ea-cf2aa600fda3\",\n\t\t\t\t\t\"group_name\": \"08ffe0d0-8d07-4204-b1ea-cf2aa600fda3\",\n\t\t\t\t\t\"type\": \"KAFKA\",\n\t\t\t\t\t\"display_type\": \"Начало\",\n\t\t\t\t\t\"description\": null,\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"Начало_0\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"serde\": {\n\t\t\t\t\t\t\t\"value\": {\n\t\t\t\t\t\t\t\t\"json\": {\n\t\t\t\t\t\t\t\t\t\"fail_on_missing_field\": false,\n\t\t\t\t\t\t\t\t\t\"timestamp_pattern\": \"yyyy-MM-dd'T'HH:mm:ss.SSSXXX\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"json\": {\n\t\t\t\t\t\t\t\t\"fail_on_missing_field\": false\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"kafka\": {\n\t\t\t\t\t\t\t\"bootstrap_servers\": \"${KAFKA_SERVERS}\",\n\t\t\t\t\t\t\t\"consumer\": {\n\t\t\t\t\t\t\t\t\"group_id\": \"decision-backend\",\n\t\t\t\t\t\t\t\t\"topic\": \"${KAFKA_INPUT_TOPIC_0c539644-d056-473f-9fdf-f830c90d0d3d}\",\n\t\t\t\t\t\t\t\t\"stop_offsets\": {\n\t\t\t\t\t\t\t\t\t\"committed\": {}\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\"start_offsets\": {\n\t\t\t\t\t\t\t\t\t\"committed\": {},\n\t\t\t\t\t\t\t\t\t\"type\": \"committed\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"properties\": \"${KAFKA_PROPERTIES}\"\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"schema\": \"http://decision-backend:8080/api/streaming/schema/ce56a889-68ff-4a16-b708-0e59b6f04757\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"transforms\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\",\n\t\t\t\t\t\"group_name\": \"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\",\n\t\t\t\t\t\"type\": \"MAPPING\",\n\t\t\t\t\t\"display_type\": \"Чтение данных\",\n\t\t\t\t\t\"description\": \"{\\\"nodeName\\\":\\\"Чтение данных_2\\\",\\\"parentUuid\\\":\\\"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\\\"}\",\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_cGykPFrZAcrcnpF\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"Чтение данных_2\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"mapping\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"expression\": \"*\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_cGykPFrZAcrcnpF\",\n\t\t\t\t\t\"group_name\": \"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\",\n\t\t\t\t\t\"type\": \"JDBC_SIMPLE_LOOKUP\",\n\t\t\t\t\t\"description\": \"{\\\"nodeName\\\":\\\"Чтение данных_2\\\",\\\"parentUuid\\\":\\\"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\\\"}\",\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_JULKXNWSpuKJqhd\"\n\t\t\t\t\t],\n\t\t\t\t\t\"exception_next\": [\n\t\t\t\t\t\t\"node_bJOfkAaAtKkdlaN\"\n\t\t\t\t\t],\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"execution_options\": {\n\t\t\t\t\t\t\t\"max_retries\": 3,\n\t\t\t\t\t\t\t\"timeout\": \"30s\",\n\t\t\t\t\t\t\t\"batch\": {\n\t\t\t\t\t\t\t\t\"interval\": \"5s\",\n\t\t\t\t\t\t\t\t\"max_size\": 1,\n\t\t\t\t\t\t\t\t\"batch_per_parallel_task\": 10\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"fetch_size\": 1000\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"jdbc\": {\n\t\t\t\t\t\t\t\"result\": {\n\t\t\t\t\t\t\t\t\"allow_multi_result_response\": false\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"statement\": {\n\t\t\t\t\t\t\t\t\"query\": \"WITH some_t AS ( SELECT generate_series(0,4) AS add_id) SELECT add_id FROM some_t where add_id  = ANY(${aa})\",\n\t\t\t\t\t\t\t\t\"table\": null,\n\t\t\t\t\t\t\t\t\"execute_as_update\": null\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"connection\": {\n\t\t\t\t\t\t\t\t\"provider_type\": \"simple\",\n\t\t\t\t\t\t\t\t\"password\": \"${DATA_PROVIDER_PASSWORD_c6a59723-708b-4789-82cb-79b882fd0a5d}\",\n\t\t\t\t\t\t\t\t\"driver\": \"${DATA_PROVIDER_DRIVER_c6a59723-708b-4789-82cb-79b882fd0a5d}\",\n\t\t\t\t\t\t\t\t\"user\": \"${DATA_PROVIDER_USER_NAME_c6a59723-708b-4789-82cb-79b882fd0a5d}\",\n\t\t\t\t\t\t\t\t\"url\": \"${DATA_PROVIDER_URI_c6a59723-708b-4789-82cb-79b882fd0a5d}\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"lookup\": {\n\t\t\t\t\t\t\t\"type\": \"OUTER\",\n\t\t\t\t\t\t\t\"overlap_fields_priority\": \"EXTERNAL_SYSTEM\",\n\t\t\t\t\t\t\t\"external_field_rename\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"old_name\": \"add_id\",\n\t\t\t\t\t\t\t\t\t\"new_name\": \"var_WoMEeiyGfCrEjvK\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_JULKXNWSpuKJqhd\",\n\t\t\t\t\t\"group_name\": \"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\",\n\t\t\t\t\t\"type\": \"MAPPING\",\n\t\t\t\t\t\"description\": \"{\\\"nodeName\\\":\\\"Чтение данных_2\\\",\\\"parentUuid\\\":\\\"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\\\"}\",\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_SjvTTCTgpcWiiRY\"\n\t\t\t\t\t],\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"mapping\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"expression\": \"CAST(`var_WoMEeiyGfCrEjvK` AS INTEGER)\",\n\t\t\t\t\t\t\t\t\"alias\": \"`test`\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"expression\": \"*\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_SjvTTCTgpcWiiRY\",\n\t\t\t\t\t\"group_name\": \"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\",\n\t\t\t\t\t\"type\": \"GROOVY_JSON\",\n\t\t\t\t\t\"display_type\": \"Чтение данных\",\n\t\t\t\t\t\"description\": \"{\\\"nodeName\\\":\\\"Чтение данных_2\\\",\\\"parentUuid\\\":\\\"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\\\"}\",\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"e7448d42-ab62-4037-a353-4dbe5c8ae957\"\n\t\t\t\t\t],\n\t\t\t\t\t\"exception_next\": [\n\t\t\t\t\t\t\"node_bJOfkAaAtKkdlaN\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"Чтение данных_2\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"input_name\": \"_json_in\",\n\t\t\t\t\t\t\"output_name\": \"_json_out\",\n\t\t\t\t\t\t\"schema_path\": \"http://decision-backend:8080/api/streaming/schema/5ed1a6c9-b3ba-4fab-b661-ee5549d469f6\",\n\t\t\t\t\t\t\"script_path\": \"http://decision-backend:8080/api/streaming/text-script/a3c6be34-876d-4b61-af97-163f57a59e00\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"e7448d42-ab62-4037-a353-4dbe5c8ae957\",\n\t\t\t\t\t\"group_name\": \"e7448d42-ab62-4037-a353-4dbe5c8ae957\",\n\t\t\t\t\t\"type\": \"MAPPING\",\n\t\t\t\t\t\"display_type\": \"Завершение\",\n\t\t\t\t\t\"description\": null,\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_JqKQIzmcQfOKwvC\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"Завершение_1\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"mapping\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"expression\": \"`aa`\",\n\t\t\t\t\t\t\t\t\"alias\": \"`aa`\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"expression\": \"'1'\",\n\t\t\t\t\t\t\t\t\"alias\": \"diagram_execute_status\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_JqKQIzmcQfOKwvC\",\n\t\t\t\t\t\"group_name\": \"node_JqKQIzmcQfOKwvC\",\n\t\t\t\t\t\"type\": \"UNION\",\n\t\t\t\t\t\"description\": null,\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_qiQVBMXWZqpEOmj\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"node_JqKQIzmcQfOKwvC\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"union\": {\n\t\t\t\t\t\t\t\"complete_schemes_equality\": false\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_bJOfkAaAtKkdlaN\",\n\t\t\t\t\t\"group_name\": \"node_bJOfkAaAtKkdlaN\",\n\t\t\t\t\t\"type\": \"UNION\",\n\t\t\t\t\t\"description\": null,\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_EwcJxEdAiXRwFbg\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"node_bJOfkAaAtKkdlaN\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"union\": {\n\t\t\t\t\t\t\t\"complete_schemes_equality\": false\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_EwcJxEdAiXRwFbg\",\n\t\t\t\t\t\"group_name\": null,\n\t\t\t\t\t\"type\": \"GROOVY_JSON\",\n\t\t\t\t\t\"description\": \"{\\\"nodeName\\\":\\\"node_bJOfkAaAtKkdlaN\\\",\\\"parentUuid\\\":\\\"node_bJOfkAaAtKkdlaN\\\"}\",\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_JqKQIzmcQfOKwvC\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"node_bJOfkAaAtKkdlaN\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"input_name\": \"_json_in\",\n\t\t\t\t\t\t\"output_name\": \"_json_out\",\n\t\t\t\t\t\t\"schema_path\": \"http://decision-backend:8080/api/streaming/schema/0752f75f-3d94-478c-8047-31badf27135c\",\n\t\t\t\t\t\t\"script_path\": \"http://decision-backend:8080/api/streaming/text-script/5f55faa0-70e4-4dc6-a887-d0ebb13482a6\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"sinks\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_qiQVBMXWZqpEOmj\",\n\t\t\t\t\t\"group_name\": \"node_JqKQIzmcQfOKwvC\",\n\t\t\t\t\t\"type\": \"KAFKA\",\n\t\t\t\t\t\"description\": null,\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [],\n\t\t\t\t\t\"display_name\": \"node_JqKQIzmcQfOKwvC\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"kafka\": {\n\t\t\t\t\t\t\t\"bootstrap_servers\": \"${KAFKA_SERVERS}\",\n\t\t\t\t\t\t\t\"producer\": {\n\t\t\t\t\t\t\t\t\"topic\": \"${KAFKA_OUTPUT_TOPIC_0c539644-d056-473f-9fdf-f830c90d0d3d}\",\n\t\t\t\t\t\t\t\t\"semantic\": \"AT_LEAST_ONCE\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"properties\": \"${KAFKA_PROPERTIES}\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"properties\": {\n\t\t\t\"public\": {},\n\t\t\t\"secure\": {}\n\t\t},\n\t\t\"name\": \"0c539644-d056-473f-9fdf-f830c90d0d3d\",\n\t\t\"enable_guid_redirection\": true,\n\t\t\"guid_field_name\": \"decision_key\",\n\t\t\"display_name\": \"New Diagram (Mnymv)\",\n\t\t\"error_handling_strategy\": \"LOG_AND_SIDE_OUTPUT\"\n\t}\n}","createUserId":"826ce1d9-2061-4756-b786-f3416e66bb12","environmentId":"a0bb1b74-bb05-42a4-9d7d-15b3ae172180","version":null,"jobId":null,"avroSchema":null,"inTopicName":"decision0c539644-d056-473f-9fdf-f830c90d0d3din.dev","outTopicName":"decision0c539644-d056-473f-9fdf-f830c90d0d3dout.dev","rootDeployId":null,"deployStatus":"STOPPED","deployTopicsStatus":"USED","deployType":"REALTIME","errorMessage":null,"initScript":null,"flinkTrackingUrl":null,"isTested":null,"deployConfigurationId":"6dbdba3a-8e01-4808-b89b-91d505bd011a","offerEnvironments":[],"lastChangeByUser":"826ce1d9-2061-4756-b786-f3416e66bb12","createByUser":"826ce1d9-2061-4756-b786-f3416e66bb12"}},"diagrams":{"16f33c9d-8d67-41f9-bf84-49366862ca9a":{"diagramWithParameters":{"lifeCycleState":"ACTIVE","versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":"LATEST","versionDescription":null,"diagramId":"63e0730c-e0d5-4a08-a6e8-3652e18f2b0a","diagramNameEntity":{"id":"1c7842e5-c75c-4c66-ada2-0c0e336c8ed8","objectId":"63e0730c-e0d5-4a08-a6e8-3652e18f2b0a","objectName":"New Diagram (Mnymv)"},"createDt":1712327008174,"changeDt":1712327547476,"lastChangeByUser":"826ce1d9-2061-4756-b786-f3416e66bb12","createByUser":"826ce1d9-2061-4756-b786-f3416e66bb12","blockFlag":false,"errorResponseFlag":false,"blockedSessionId":null,"diagramDescription":null,"metaInfo":{"nodeCounter":3},"inOutParameters":[{"parameterVersionId":"90aad21b-cfbc-4e93-9bef-dc231fc1fc1e","parameterId":"086a159c-e0ee-4c20-b078-2940e1d47840","parameterName":"diagram_execute_status","diagramVersion":{"lifeCycleState":null,"versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","primitiveTypeId":"2","primitiveType":{"typeId":"2","typeName":null,"displayName":null,"javaClassName":null,"castToFlink":null,"castToExpression":null,"flinkTypeName":null,"enumTypeName":null,"avroTypeName":null},"complexTypeVersionId":null,"complexTypeVersion":null,"arrayFlag":false,"parameterType":"OUT","sourceType":"OUTER","defaultValue":"'0'","metaInfo":{"orderNum":0,"isExecuteStatus":true},"typeId":"2"},{"parameterVersionId":"e1f13fd6-fb8b-429d-a113-b9125f209330","parameterId":"20b8aaf9-7020-445d-aa9b-ae0f2712f873","parameterName":"test","diagramVersion":{"lifeCycleState":null,"versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","primitiveTypeId":"1","primitiveType":{"typeId":"1","typeName":null,"displayName":null,"javaClassName":null,"castToFlink":null,"castToExpression":null,"flinkTypeName":null,"enumTypeName":null,"avroTypeName":null},"complexTypeVersionId":null,"complexTypeVersion":null,"arrayFlag":false,"parameterType":null,"sourceType":"INNER","defaultValue":null,"metaInfo":null,"typeId":"1"},{"parameterVersionId":"bf194901-7fa4-4b74-9b06-a28418487395","parameterId":"ef396877-0699-439e-9ec5-49fd82268bde","parameterName":"aa","diagramVersion":{"lifeCycleState":null,"versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","primitiveTypeId":"1","primitiveType":{"typeId":"1","typeName":null,"displayName":null,"javaClassName":null,"castToFlink":null,"castToExpression":null,"flinkTypeName":null,"enumTypeName":null,"avroTypeName":null},"complexTypeVersionId":null,"complexTypeVersion":null,"arrayFlag":true,"parameterType":"IN_OUT","sourceType":"OUTER","defaultValue":null,"metaInfo":{"orderNum":1},"typeId":"1"}]},"nodes":[{"nodeId":"c779cd1a-86e9-4e72-826f-cf5198791ec7","diagramVersion":{"lifeCycleState":null,"versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","nodeTypeId":2,"nodeName":"Начало_0","nodeDescription":null,"jsonProperty":{"nodeType":"2","parallelism":null,"mappingVariables":[{"rowKey":"bc9b95c7-6458-4096-bc23-1b703de5cc5d","variableName":"aa","typeId":"1","isArray":true,"isComplex":false,"isDict":false,"parameterId":"ef396877-0699-439e-9ec5-49fd82268bde"}]},"validState":"VALID","metaInfo":{"position":{"x":183,"y":111.234375},"shape":null,"extent":null,"parentNode":null,"blockInnerMeta":null},"displayType":"Начало"},{"nodeId":"0d831143-3e41-4e7e-a951-5ed9da23ca5b","diagramVersion":{"lifeCycleState":null,"versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","nodeTypeId":4,"nodeName":"Чтение данных_2","nodeDescription":null,"jsonProperty":{"nodeType":"4","parallelism":null,"dataProviderUuid":"c6a59723-708b-4789-82cb-79b882fd0a5d","timeout":null,"maxRetries":null,"selectedTableNames":["address"],"allowMultiResultResponse":false,"outputVariablesMapping":[{"id":"20b8aaf9-7020-445d-aa9b-ae0f2712f873","rowKey":"36459449-28ea-46d7-a744-bed8500e551e","variableName":"test","typeId":"1","isArray":false,"isComplex":false,"isDict":false,"nodeVariable":"add_id","externalId":null,"isJdbcArrayKey":false,"arrayVariable":null}],"query":"select  add_id from  address"},"validState":"VALID","metaInfo":{"position":{"x":481,"y":342.234375},"shape":null,"extent":null,"parentNode":null,"blockInnerMeta":null},"displayType":"Чтение данных"},{"nodeId":"329d5e27-6a4d-4c0b-a474-1a2fbea26167","diagramVersion":{"lifeCycleState":null,"versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","nodeTypeId":3,"nodeName":"Завершение_1","nodeDescription":null,"jsonProperty":{"nodeType":"3","mappingVariables":[{"id":"ef396877-0699-439e-9ec5-49fd82268bde","rowKey":"04b64a00-0f59-4c64-9dca-bdb140dbb730","variableName":"aa","typeId":"1","isArray":true,"isComplex":false,"isDict":false,"isLiteral":false,"parameter":{"parameterName":"aa","parameterId":"ef396877-0699-439e-9ec5-49fd82268bde","isNullValue":false}}]},"validState":"VALID","metaInfo":{"position":{"x":1109,"y":173.234375},"shape":null,"extent":null,"parentNode":null,"blockInnerMeta":null},"displayType":"Завершение"}],"links":[{"linkId":"f2860aaa-cf6b-4ecd-a5e5-6466230ce64f","diagramVersion":{"lifeCycleState":null,"versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","prevNode":{"nodeId":"c779cd1a-86e9-4e72-826f-cf5198791ec7","diagramVersion":null,"diagramVersionId":null,"nodeTypeId":null,"nodeName":null,"nodeDescription":null,"jsonProperty":null,"validState":null,"metaInfo":null,"displayType":null},"prevNodeId":"c779cd1a-86e9-4e72-826f-cf5198791ec7","nextNode":{"nodeId":"0d831143-3e41-4e7e-a951-5ed9da23ca5b","diagramVersion":null,"diagramVersionId":null,"nodeTypeId":null,"nodeName":null,"nodeDescription":null,"jsonProperty":null,"validState":null,"metaInfo":null,"displayType":null},"nextNodeId":"0d831143-3e41-4e7e-a951-5ed9da23ca5b"},{"linkId":"d096a180-f4e8-4d31-a0c9-765373d65683","diagramVersion":{"lifeCycleState":null,"versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","prevNode":{"nodeId":"0d831143-3e41-4e7e-a951-5ed9da23ca5b","diagramVersion":null,"diagramVersionId":null,"nodeTypeId":null,"nodeName":null,"nodeDescription":null,"jsonProperty":null,"validState":null,"metaInfo":null,"displayType":null},"prevNodeId":"0d831143-3e41-4e7e-a951-5ed9da23ca5b","nextNode":{"nodeId":"329d5e27-6a4d-4c0b-a474-1a2fbea26167","diagramVersion":null,"diagramVersionId":null,"nodeTypeId":null,"nodeName":null,"nodeDescription":null,"jsonProperty":null,"validState":null,"metaInfo":null,"displayType":null},"nextNodeId":"329d5e27-6a4d-4c0b-a474-1a2fbea26167"}],"variableAssociations":[{"id":null,"variable":{"parameterVersionId":"bf194901-7fa4-4b74-9b06-a28418487395","parameterId":"ef396877-0699-439e-9ec5-49fd82268bde","parameterName":"aa","diagramVersion":{"lifeCycleState":null,"versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","primitiveTypeId":"1","primitiveType":{"typeId":"1","typeName":null,"displayName":null,"javaClassName":null,"castToFlink":null,"castToExpression":null,"flinkTypeName":null,"enumTypeName":null,"avroTypeName":null},"complexTypeVersionId":null,"complexTypeVersion":null,"arrayFlag":true,"parameterType":"IN_OUT","sourceType":"OUTER","defaultValue":null,"metaInfo":{"orderNum":1},"typeId":"1"},"variableId":"bf194901-7fa4-4b74-9b06-a28418487395","link":{"linkId":"f2860aaa-cf6b-4ecd-a5e5-6466230ce64f","diagramVersion":null,"diagramVersionId":null,"prevNode":null,"prevNodeId":null,"nextNode":null,"nextNodeId":null},"linkId":"f2860aaa-cf6b-4ecd-a5e5-6466230ce64f","calcFlag":true,"typeId":"1"},{"id":null,"variable":{"parameterVersionId":"e1f13fd6-fb8b-429d-a113-b9125f209330","parameterId":"20b8aaf9-7020-445d-aa9b-ae0f2712f873","parameterName":"test","diagramVersion":{"lifeCycleState":null,"versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","primitiveTypeId":"1","primitiveType":{"typeId":"1","typeName":null,"displayName":null,"javaClassName":null,"castToFlink":null,"castToExpression":null,"flinkTypeName":null,"enumTypeName":null,"avroTypeName":null},"complexTypeVersionId":null,"complexTypeVersion":null,"arrayFlag":false,"parameterType":null,"sourceType":"INNER","defaultValue":null,"metaInfo":null,"typeId":"1"},"variableId":"e1f13fd6-fb8b-429d-a113-b9125f209330","link":{"linkId":"d096a180-f4e8-4d31-a0c9-765373d65683","diagramVersion":null,"diagramVersionId":null,"prevNode":null,"prevNodeId":null,"nextNode":null,"nextNodeId":null},"linkId":"d096a180-f4e8-4d31-a0c9-765373d65683","calcFlag":true,"typeId":"1"},{"id":null,"variable":{"parameterVersionId":"bf194901-7fa4-4b74-9b06-a28418487395","parameterId":"ef396877-0699-439e-9ec5-49fd82268bde","parameterName":"aa","diagramVersion":{"lifeCycleState":null,"versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","primitiveTypeId":"1","primitiveType":{"typeId":"1","typeName":null,"displayName":null,"javaClassName":null,"castToFlink":null,"castToExpression":null,"flinkTypeName":null,"enumTypeName":null,"avroTypeName":null},"complexTypeVersionId":null,"complexTypeVersion":null,"arrayFlag":true,"parameterType":"IN_OUT","sourceType":"OUTER","defaultValue":null,"metaInfo":{"orderNum":1},"typeId":"1"},"variableId":"bf194901-7fa4-4b74-9b06-a28418487395","link":{"linkId":"d096a180-f4e8-4d31-a0c9-765373d65683","diagramVersion":null,"diagramVersionId":null,"prevNode":null,"prevNodeId":null,"nextNode":null,"nextNodeId":null},"linkId":"d096a180-f4e8-4d31-a0c9-765373d65683","calcFlag":false,"typeId":"1"}]},"d8ce006d-d327-4aa6-8c26-c004e7097cda":{"diagramWithParameters":{"lifeCycleState":"ACTIVE","versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":"v.2024-04-05_17:44:16_deploy","versionType":"DEPLOYED","versionDescription":null,"diagramId":"63e0730c-e0d5-4a08-a6e8-3652e18f2b0a","diagramNameEntity":{"id":"1c7842e5-c75c-4c66-ada2-0c0e336c8ed8","objectId":"63e0730c-e0d5-4a08-a6e8-3652e18f2b0a","objectName":"New Diagram (Mnymv)"},"createDt":1712327008174,"changeDt":1712328256334,"lastChangeByUser":"826ce1d9-2061-4756-b786-f3416e66bb12","createByUser":"826ce1d9-2061-4756-b786-f3416e66bb12","blockFlag":false,"errorResponseFlag":false,"blockedSessionId":null,"diagramDescription":null,"metaInfo":{"nodeCounter":3},"inOutParameters":[{"parameterVersionId":"9d6fe840-96f6-4d8f-a55a-82ea2705da09","parameterId":"20b8aaf9-7020-445d-aa9b-ae0f2712f873","parameterName":"test","diagramVersion":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","primitiveTypeId":"1","primitiveType":{"typeId":"1","typeName":null,"displayName":null,"javaClassName":null,"castToFlink":null,"castToExpression":null,"flinkTypeName":null,"enumTypeName":null,"avroTypeName":null},"complexTypeVersionId":null,"complexTypeVersion":null,"arrayFlag":false,"parameterType":null,"sourceType":"INNER","defaultValue":null,"metaInfo":null,"typeId":"1"},{"parameterVersionId":"6de7cbc4-266b-401d-8ef5-f67da04289a1","parameterId":"ef396877-0699-439e-9ec5-49fd82268bde","parameterName":"aa","diagramVersion":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","primitiveTypeId":"1","primitiveType":{"typeId":"1","typeName":null,"displayName":null,"javaClassName":null,"castToFlink":null,"castToExpression":null,"flinkTypeName":null,"enumTypeName":null,"avroTypeName":null},"complexTypeVersionId":null,"complexTypeVersion":null,"arrayFlag":true,"parameterType":"IN_OUT","sourceType":"OUTER","defaultValue":null,"metaInfo":{"orderNum":1},"typeId":"1"},{"parameterVersionId":"d28f91b2-0993-4662-ba71-3f556e9690f2","parameterId":"086a159c-e0ee-4c20-b078-2940e1d47840","parameterName":"diagram_execute_status","diagramVersion":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","primitiveTypeId":"2","primitiveType":{"typeId":"2","typeName":null,"displayName":null,"javaClassName":null,"castToFlink":null,"castToExpression":null,"flinkTypeName":null,"enumTypeName":null,"avroTypeName":null},"complexTypeVersionId":null,"complexTypeVersion":null,"arrayFlag":false,"parameterType":"OUT","sourceType":"OUTER","defaultValue":"'0'","metaInfo":{"orderNum":0,"isExecuteStatus":true},"typeId":"2"}]},"nodes":[{"nodeId":"e7448d42-ab62-4037-a353-4dbe5c8ae957","diagramVersion":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","nodeTypeId":3,"nodeName":"Завершение_1","nodeDescription":null,"jsonProperty":{"nodeType":"3","mappingVariables":[{"id":"ef396877-0699-439e-9ec5-49fd82268bde","rowKey":"04b64a00-0f59-4c64-9dca-bdb140dbb730","variableName":"aa","typeId":"1","isArray":true,"isComplex":false,"isDict":false,"isLiteral":false,"parameter":{"parameterName":"aa","parameterId":"ef396877-0699-439e-9ec5-49fd82268bde","isNullValue":false}}]},"validState":"VALID","metaInfo":{"position":{"x":1109,"y":173.234375},"shape":null,"extent":null,"parentNode":null,"blockInnerMeta":null},"displayType":"Завершение"},{"nodeId":"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5","diagramVersion":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","nodeTypeId":4,"nodeName":"Чтение данных_2","nodeDescription":null,"jsonProperty":{"nodeType":"4","parallelism":null,"dataProviderUuid":"c6a59723-708b-4789-82cb-79b882fd0a5d","timeout":null,"maxRetries":null,"selectedTableNames":["address"],"allowMultiResultResponse":false,"outputVariablesMapping":[{"id":"20b8aaf9-7020-445d-aa9b-ae0f2712f873","rowKey":"36459449-28ea-46d7-a744-bed8500e551e","variableName":"test","typeId":"1","isArray":false,"isComplex":false,"isDict":false,"nodeVariable":"add_id","externalId":null,"isJdbcArrayKey":false,"arrayVariable":null}],"query":"select  add_id from  address"},"validState":"VALID","metaInfo":{"position":{"x":481,"y":342.234375},"shape":null,"extent":null,"parentNode":null,"blockInnerMeta":null},"displayType":"Чтение данных"},{"nodeId":"08ffe0d0-8d07-4204-b1ea-cf2aa600fda3","diagramVersion":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","nodeTypeId":2,"nodeName":"Начало_0","nodeDescription":null,"jsonProperty":{"nodeType":"2","parallelism":null,"mappingVariables":[{"rowKey":"bc9b95c7-6458-4096-bc23-1b703de5cc5d","variableName":"aa","typeId":"1","isArray":true,"isComplex":false,"isDict":false,"parameterId":"ef396877-0699-439e-9ec5-49fd82268bde"}]},"validState":"VALID","metaInfo":{"position":{"x":183,"y":111.234375},"shape":null,"extent":null,"parentNode":null,"blockInnerMeta":null},"displayType":"Начало"}],"links":[{"linkId":"0c6678e3-3fea-4264-ad2a-08ae440457b2","diagramVersion":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","prevNode":{"nodeId":"08ffe0d0-8d07-4204-b1ea-cf2aa600fda3","diagramVersion":null,"diagramVersionId":null,"nodeTypeId":null,"nodeName":null,"nodeDescription":null,"jsonProperty":null,"validState":null,"metaInfo":null,"displayType":null},"prevNodeId":"08ffe0d0-8d07-4204-b1ea-cf2aa600fda3","nextNode":{"nodeId":"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5","diagramVersion":null,"diagramVersionId":null,"nodeTypeId":null,"nodeName":null,"nodeDescription":null,"jsonProperty":null,"validState":null,"metaInfo":null,"displayType":null},"nextNodeId":"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5"},{"linkId":"563713ec-cd7b-49bd-bc2a-a6a0b9534044","diagramVersion":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","prevNode":{"nodeId":"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5","diagramVersion":null,"diagramVersionId":null,"nodeTypeId":null,"nodeName":null,"nodeDescription":null,"jsonProperty":null,"validState":null,"metaInfo":null,"displayType":null},"prevNodeId":"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5","nextNode":{"nodeId":"e7448d42-ab62-4037-a353-4dbe5c8ae957","diagramVersion":null,"diagramVersionId":null,"nodeTypeId":null,"nodeName":null,"nodeDescription":null,"jsonProperty":null,"validState":null,"metaInfo":null,"displayType":null},"nextNodeId":"e7448d42-ab62-4037-a353-4dbe5c8ae957"}],"variableAssociations":[{"id":null,"variable":{"parameterVersionId":"6de7cbc4-266b-401d-8ef5-f67da04289a1","parameterId":"ef396877-0699-439e-9ec5-49fd82268bde","parameterName":"aa","diagramVersion":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","primitiveTypeId":"1","primitiveType":{"typeId":"1","typeName":null,"displayName":null,"javaClassName":null,"castToFlink":null,"castToExpression":null,"flinkTypeName":null,"enumTypeName":null,"avroTypeName":null},"complexTypeVersionId":null,"complexTypeVersion":null,"arrayFlag":true,"parameterType":"IN_OUT","sourceType":"OUTER","defaultValue":null,"metaInfo":{"orderNum":1},"typeId":"1"},"variableId":"6de7cbc4-266b-401d-8ef5-f67da04289a1","link":{"linkId":"0c6678e3-3fea-4264-ad2a-08ae440457b2","diagramVersion":null,"diagramVersionId":null,"prevNode":null,"prevNodeId":null,"nextNode":null,"nextNodeId":null},"linkId":"0c6678e3-3fea-4264-ad2a-08ae440457b2","calcFlag":true,"typeId":"1"},{"id":null,"variable":{"parameterVersionId":"6de7cbc4-266b-401d-8ef5-f67da04289a1","parameterId":"ef396877-0699-439e-9ec5-49fd82268bde","parameterName":"aa","diagramVersion":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","primitiveTypeId":"1","primitiveType":{"typeId":"1","typeName":null,"displayName":null,"javaClassName":null,"castToFlink":null,"castToExpression":null,"flinkTypeName":null,"enumTypeName":null,"avroTypeName":null},"complexTypeVersionId":null,"complexTypeVersion":null,"arrayFlag":true,"parameterType":"IN_OUT","sourceType":"OUTER","defaultValue":null,"metaInfo":{"orderNum":1},"typeId":"1"},"variableId":"6de7cbc4-266b-401d-8ef5-f67da04289a1","link":{"linkId":"563713ec-cd7b-49bd-bc2a-a6a0b9534044","diagramVersion":null,"diagramVersionId":null,"prevNode":null,"prevNodeId":null,"nextNode":null,"nextNodeId":null},"linkId":"563713ec-cd7b-49bd-bc2a-a6a0b9534044","calcFlag":false,"typeId":"1"},{"id":null,"variable":{"parameterVersionId":"9d6fe840-96f6-4d8f-a55a-82ea2705da09","parameterId":"20b8aaf9-7020-445d-aa9b-ae0f2712f873","parameterName":"test","diagramVersion":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"diagramVersionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","primitiveTypeId":"1","primitiveType":{"typeId":"1","typeName":null,"displayName":null,"javaClassName":null,"castToFlink":null,"castToExpression":null,"flinkTypeName":null,"enumTypeName":null,"avroTypeName":null},"complexTypeVersionId":null,"complexTypeVersion":null,"arrayFlag":false,"parameterType":null,"sourceType":"INNER","defaultValue":null,"metaInfo":null,"typeId":"1"},"variableId":"9d6fe840-96f6-4d8f-a55a-82ea2705da09","link":{"linkId":"563713ec-cd7b-49bd-bc2a-a6a0b9534044","diagramVersion":null,"diagramVersionId":null,"prevNode":null,"prevNodeId":null,"nextNode":null,"nextNodeId":null},"linkId":"563713ec-cd7b-49bd-bc2a-a6a0b9534044","calcFlag":true,"typeId":"1"}]}},"dataProviders":{"c6a59723-708b-4789-82cb-79b882fd0a5d":{"sourceId":"c6a59723-708b-4789-82cb-79b882fd0a5d","description":"description","sourceName":"KI_test_pg_local","sourceTypeId":"ed6a4480-3b85-40c9-b628-6394cd336308","sourceType":{"id":"ed6a4480-3b85-40c9-b628-6394cd336308","typeName":"POSTGRES","connectionType":"JDBC","tablesQuery":null,"urlMask":null,"driverClass":null,"userType":false,"sdiEnabled":true,"sdeEnabled":true},"createDt":1652685742293,"changeDt":1669866988611,"lastChangeByUser":"80ad2144-548f-4c08-8f18-07ee2de9b7f0","createByUser":"58b5bd5c-b349-49d3-87c3-186f1b7f6230","settings":[{"sourceSettingsId":"f6993c25-7478-4f5e-9e47-09e6d54a60a9","serverName":"10.22.0.36","hosts":null,"port":"32303","username":"postgres","password":"xL5OgWyPwD6m8PIx2wSn4dfR18Xq5+9X4Q19WeYogAx3XHpz8bBEJAaFhk1p5vEj","zookeeperQuorum":null,"zookeeperZnodeParent":null,"additionalProperties":null,"additionalSettings":[],"environmentSettingsId":"a0bb1b74-bb05-42a4-9d7d-15b3ae172180","scheme":null,"database":"test","inputType":"parameters","url":"jdbc:postgresql://10.22.0.36:32303/test?","token":null,"dataProvider":{"sourceId":"c6a59723-708b-4789-82cb-79b882fd0a5d","description":null,"sourceName":null,"sourceTypeId":null,"sourceType":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"settings":null}}]}},"dataProviderToDiagramRelations":{"9e24925e-48c3-451a-9f64-b481d621a99c":{"id":"9e24925e-48c3-451a-9f64-b481d621a99c","toKey":"16f33c9d-8d67-41f9-bf84-49366862ca9a","relationType":"INCLUDE","nodeId":"0d831143-3e41-4e7e-a951-5ed9da23ca5b","node":{"nodeId":"0d831143-3e41-4e7e-a951-5ed9da23ca5b","diagramVersion":null,"diagramVersionId":null,"nodeTypeId":null,"nodeName":null,"nodeDescription":null,"jsonProperty":null,"validState":null,"metaInfo":null,"displayType":null},"fromKey":"c6a59723-708b-4789-82cb-79b882fd0a5d","toEntity":{"lifeCycleState":null,"versionId":"16f33c9d-8d67-41f9-bf84-49366862ca9a","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"fromEntity":{"sourceId":"c6a59723-708b-4789-82cb-79b882fd0a5d","description":null,"sourceName":null,"sourceTypeId":null,"sourceType":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"settings":null}},"8367d3c4-8ec8-4130-b024-f123a8160960":{"id":"8367d3c4-8ec8-4130-b024-f123a8160960","toKey":"d8ce006d-d327-4aa6-8c26-c004e7097cda","relationType":"INHERITED_VERSION","nodeId":"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5","node":{"nodeId":"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5","diagramVersion":null,"diagramVersionId":null,"nodeTypeId":null,"nodeName":null,"nodeDescription":null,"jsonProperty":null,"validState":null,"metaInfo":null,"displayType":null},"fromKey":"c6a59723-708b-4789-82cb-79b882fd0a5d","toEntity":{"lifeCycleState":null,"versionId":"d8ce006d-d327-4aa6-8c26-c004e7097cda","versionName":null,"versionType":null,"versionDescription":null,"diagramId":null,"diagramNameEntity":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"blockFlag":null,"errorResponseFlag":null,"blockedSessionId":null,"diagramDescription":null,"metaInfo":null,"inOutParameters":null},"fromEntity":{"sourceId":"c6a59723-708b-4789-82cb-79b882fd0a5d","description":null,"sourceName":null,"sourceTypeId":null,"sourceType":null,"createDt":null,"changeDt":null,"lastChangeByUser":null,"createByUser":null,"settings":null}}},"rootIdsAndDescriptions":{"16f33c9d-8d67-41f9-bf84-49366862ca9a":{"0c539644-d056-473f-9fdf-f830c90d0d3d":"New Diagram (Mnymv) (v.2024-04-05_17:44:16_deploy)"},"c6a59723-708b-4789-82cb-79b882fd0a5d":{"0c539644-d056-473f-9fdf-f830c90d0d3d":"New Diagram (Mnymv) (v.2024-04-05_17:44:16_deploy)"},"d8ce006d-d327-4aa6-8c26-c004e7097cda":{"0c539644-d056-473f-9fdf-f830c90d0d3d":"New Diagram (Mnymv) (v.2024-04-05_17:44:16_deploy)"},"0c539644-d056-473f-9fdf-f830c90d0d3d":{"0c539644-d056-473f-9fdf-f830c90d0d3d":"New Diagram (Mnymv) (v.2024-04-05_17:44:16_deploy)"}},"schemas":[{"schemaId":"ce56a889-68ff-4a16-b708-0e59b6f04757","schemaText":"{\"type\":\"record\",\"name\":\"root\",\"fields\":[{\"name\":\"aa\",\"type\":{\"type\":\"array\",\"items\":[\"null\",\"int\"]}}]}","deployId":"0c539644-d056-473f-9fdf-f830c90d0d3d"},{"schemaId":"5ed1a6c9-b3ba-4fab-b661-ee5549d469f6","schemaText":"{\"type\":\"record\",\"name\":\"root\",\"fields\":[{\"name\":\"aa\",\"type\":{\"type\":\"array\",\"items\":[\"null\",\"int\"]}},{\"name\":\"test\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"decision_key\",\"type\":[\"null\",\"string\"],\"default\":null}]}","deployId":"0c539644-d056-473f-9fdf-f830c90d0d3d"},{"schemaId":"0752f75f-3d94-478c-8047-31badf27135c","schemaText":"{\"type\":\"record\",\"name\":\"root\",\"fields\":[{\"name\":\"aa\",\"type\":{\"type\":\"array\",\"items\":[\"null\",\"int\"]}},{\"name\":\"diagram_execute_status\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"errorTrace\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"decision_key\",\"type\":[\"null\",\"string\"],\"default\":null}]}","deployId":"0c539644-d056-473f-9fdf-f830c90d0d3d"}],"textScripts":[{"scriptId":"a3c6be34-876d-4b61-af97-163f57a59e00","scriptText":"import static com.glowbyte.decision.GroovyDecisionFunction.*\nimport com.google.gson.Gson\nimport com.google.gson.GsonBuilder\nimport groovy.json.JsonSlurper\n\ndef _object= new JsonSlurper().parseText(_json_in)\nclass MapDecisionExtension {\n    static <K, V> V getWithReplaceNull(Map<K, V> map, K key, V defaultValue) {\n        if (!map.containsKey(key) || map.get(key) == null) {\n            map.put(key, defaultValue)\n        }\n        return map.get(key)\n    }\n}\nuse(MapDecisionExtension) { varI14MYPkhY23xWh40c -> \n\n}\n_json_out = new GsonBuilder().serializeNulls().setDateFormat(\"yyyy-MM-dd\").create().toJson(_object)","scriptType":"GROOVY","deployId":"0c539644-d056-473f-9fdf-f830c90d0d3d"},{"scriptId":"5f55faa0-70e4-4dc6-a887-d0ebb13482a6","scriptText":"import com.google.gson.Gson\nimport com.google.gson.GsonBuilder\nimport groovy.json.JsonSlurper\n\nimport static com.glowbyte.decision.GroovyDecisionFunction.*\n\ndef _object= new JsonSlurper().parseText(_json_in)\ntry {\n_object.aa = null\n}catch(Exception ex) {\n_object.aa = null\n_object.errorTrace += ex.getMessage()\n}\ntry {\n_object.diagram_execute_status = '0'\n}catch(Exception ex) {\n_object.diagram_execute_status = null\n_object.errorTrace += ex.getMessage()\n}\n_json_out = new GsonBuilder().serializeNulls().setDateFormat(\"yyyy-MM-dd\").create().toJson(_object)","scriptType":"GROOVY","deployId":"0c539644-d056-473f-9fdf-f830c90d0d3d"}]}
+{
+	"deploysasdasd": {
+		"0c539644-d056-473f-9fdf-f830c90d0d3d": {
+			"deployId": "0c539644-d056-473f-9fdf-f830c90d0d3d",
+			"changeDt": 1712328618826,
+			"diagram": {
+				"lifeCycleState": null,
+				"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+				"versionName": "v.2024-04-05_17:44:16_deploy",
+				"versionType": null,
+				"versionDescription": null,
+				"diagramId": null,
+				"diagramNameEntity": {
+					"id": "1c7842e5-c75c-4c66-ada2-0c0e336c8ed8",
+					"objectId": "63e0730c-e0d5-4a08-a6e8-3652e18f2b0a",
+					"objectName": "New Diagram (Mnymv)"
+				},
+				"createDt": null,
+				"changeDt": null,
+				"lastChangeByUser": null,
+				"createByUser": null,
+				"blockFlag": null,
+				"errorResponseFlag": null,
+				"blockedSessionId": null,
+				"diagramDescription": null,
+				"metaInfo": null,
+				"inOutParameters": null
+			},
+			"diagramVersionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+			"diagramId": "63e0730c-e0d5-4a08-a6e8-3652e18f2b0a",
+			"deployText": "{\n\t\"job\": {\n\t\t\"pipeline\": {\n\t\t\t\"sources\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"08ffe0d0-8d07-4204-b1ea-cf2aa600fda3\",\n\t\t\t\t\t\"group_name\": \"08ffe0d0-8d07-4204-b1ea-cf2aa600fda3\",\n\t\t\t\t\t\"type\": \"KAFKA\",\n\t\t\t\t\t\"display_type\": \"Начало\",\n\t\t\t\t\t\"description\": null,\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"Начало_0\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"serde\": {\n\t\t\t\t\t\t\t\"value\": {\n\t\t\t\t\t\t\t\t\"json\": {\n\t\t\t\t\t\t\t\t\t\"fail_on_missing_field\": false,\n\t\t\t\t\t\t\t\t\t\"timestamp_pattern\": \"yyyy-MM-dd'T'HH:mm:ss.SSSXXX\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"json\": {\n\t\t\t\t\t\t\t\t\"fail_on_missing_field\": false\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"kafka\": {\n\t\t\t\t\t\t\t\"bootstrap_servers\": \"${KAFKA_SERVERS}\",\n\t\t\t\t\t\t\t\"consumer\": {\n\t\t\t\t\t\t\t\t\"group_id\": \"decision-backend\",\n\t\t\t\t\t\t\t\t\"topic\": \"${KAFKA_INPUT_TOPIC_0c539644-d056-473f-9fdf-f830c90d0d3d}\",\n\t\t\t\t\t\t\t\t\"stop_offsets\": {\n\t\t\t\t\t\t\t\t\t\"committed\": {}\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\"start_offsets\": {\n\t\t\t\t\t\t\t\t\t\"committed\": {},\n\t\t\t\t\t\t\t\t\t\"type\": \"committed\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"properties\": \"${KAFKA_PROPERTIES}\"\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"schema\": \"http://decision-backend:8080/api/streaming/schema/ce56a889-68ff-4a16-b708-0e59b6f04757\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"transforms\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\",\n\t\t\t\t\t\"group_name\": \"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\",\n\t\t\t\t\t\"type\": \"MAPPING\",\n\t\t\t\t\t\"display_type\": \"Чтение данных\",\n\t\t\t\t\t\"description\": \"{\\\"nodeName\\\":\\\"Чтение данных_2\\\",\\\"parentUuid\\\":\\\"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\\\"}\",\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_cGykPFrZAcrcnpF\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"Чтение данных_2\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"mapping\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"expression\": \"*\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_cGykPFrZAcrcnpF\",\n\t\t\t\t\t\"group_name\": \"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\",\n\t\t\t\t\t\"type\": \"JDBC_SIMPLE_LOOKUP\",\n\t\t\t\t\t\"description\": \"{\\\"nodeName\\\":\\\"Чтение данных_2\\\",\\\"parentUuid\\\":\\\"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\\\"}\",\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_JULKXNWSpuKJqhd\"\n\t\t\t\t\t],\n\t\t\t\t\t\"exception_next\": [\n\t\t\t\t\t\t\"node_bJOfkAaAtKkdlaN\"\n\t\t\t\t\t],\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"execution_options\": {\n\t\t\t\t\t\t\t\"max_retries\": 3,\n\t\t\t\t\t\t\t\"timeout\": \"30s\",\n\t\t\t\t\t\t\t\"batch\": {\n\t\t\t\t\t\t\t\t\"interval\": \"5s\",\n\t\t\t\t\t\t\t\t\"max_size\": 1,\n\t\t\t\t\t\t\t\t\"batch_per_parallel_task\": 10\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"fetch_size\": 1000\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"jdbc\": {\n\t\t\t\t\t\t\t\"result\": {\n\t\t\t\t\t\t\t\t\"allow_multi_result_response\": false\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"statement\": {\n\t\t\t\t\t\t\t\t\"query\": \"WITH some_t AS ( SELECT generate_series(0,4) AS add_id) SELECT add_id FROM some_t where add_id  = ANY(${aa})\",\n\t\t\t\t\t\t\t\t\"table\": null,\n\t\t\t\t\t\t\t\t\"execute_as_update\": null\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"connection\": {\n\t\t\t\t\t\t\t\t\"provider_type\": \"simple\",\n\t\t\t\t\t\t\t\t\"password\": \"${DATA_PROVIDER_PASSWORD_c6a59723-708b-4789-82cb-79b882fd0a5d}\",\n\t\t\t\t\t\t\t\t\"driver\": \"${DATA_PROVIDER_DRIVER_c6a59723-708b-4789-82cb-79b882fd0a5d}\",\n\t\t\t\t\t\t\t\t\"user\": \"${DATA_PROVIDER_USER_NAME_c6a59723-708b-4789-82cb-79b882fd0a5d}\",\n\t\t\t\t\t\t\t\t\"url\": \"${DATA_PROVIDER_URI_c6a59723-708b-4789-82cb-79b882fd0a5d}\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"lookup\": {\n\t\t\t\t\t\t\t\"type\": \"OUTER\",\n\t\t\t\t\t\t\t\"overlap_fields_priority\": \"EXTERNAL_SYSTEM\",\n\t\t\t\t\t\t\t\"external_field_rename\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"old_name\": \"add_id\",\n\t\t\t\t\t\t\t\t\t\"new_name\": \"var_WoMEeiyGfCrEjvK\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_JULKXNWSpuKJqhd\",\n\t\t\t\t\t\"group_name\": \"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\",\n\t\t\t\t\t\"type\": \"MAPPING\",\n\t\t\t\t\t\"description\": \"{\\\"nodeName\\\":\\\"Чтение данных_2\\\",\\\"parentUuid\\\":\\\"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\\\"}\",\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_SjvTTCTgpcWiiRY\"\n\t\t\t\t\t],\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"mapping\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"expression\": \"CAST(`var_WoMEeiyGfCrEjvK` AS INTEGER)\",\n\t\t\t\t\t\t\t\t\"alias\": \"`test`\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"expression\": \"*\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_SjvTTCTgpcWiiRY\",\n\t\t\t\t\t\"group_name\": \"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\",\n\t\t\t\t\t\"type\": \"GROOVY_JSON\",\n\t\t\t\t\t\"display_type\": \"Чтение данных\",\n\t\t\t\t\t\"description\": \"{\\\"nodeName\\\":\\\"Чтение данных_2\\\",\\\"parentUuid\\\":\\\"280e2aa9-dcf7-4c24-ab91-a49ffb079ea5\\\"}\",\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"e7448d42-ab62-4037-a353-4dbe5c8ae957\"\n\t\t\t\t\t],\n\t\t\t\t\t\"exception_next\": [\n\t\t\t\t\t\t\"node_bJOfkAaAtKkdlaN\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"Чтение данных_2\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"input_name\": \"_json_in\",\n\t\t\t\t\t\t\"output_name\": \"_json_out\",\n\t\t\t\t\t\t\"schema_path\": \"http://decision-backend:8080/api/streaming/schema/5ed1a6c9-b3ba-4fab-b661-ee5549d469f6\",\n\t\t\t\t\t\t\"script_path\": \"http://decision-backend:8080/api/streaming/text-script/a3c6be34-876d-4b61-af97-163f57a59e00\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"e7448d42-ab62-4037-a353-4dbe5c8ae957\",\n\t\t\t\t\t\"group_name\": \"e7448d42-ab62-4037-a353-4dbe5c8ae957\",\n\t\t\t\t\t\"type\": \"MAPPING\",\n\t\t\t\t\t\"display_type\": \"Завершение\",\n\t\t\t\t\t\"description\": null,\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_JqKQIzmcQfOKwvC\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"Завершение_1\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"mapping\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"expression\": \"`aa`\",\n\t\t\t\t\t\t\t\t\"alias\": \"`aa`\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"expression\": \"'1'\",\n\t\t\t\t\t\t\t\t\"alias\": \"diagram_execute_status\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_JqKQIzmcQfOKwvC\",\n\t\t\t\t\t\"group_name\": \"node_JqKQIzmcQfOKwvC\",\n\t\t\t\t\t\"type\": \"UNION\",\n\t\t\t\t\t\"description\": null,\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_qiQVBMXWZqpEOmj\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"node_JqKQIzmcQfOKwvC\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"union\": {\n\t\t\t\t\t\t\t\"complete_schemes_equality\": false\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_bJOfkAaAtKkdlaN\",\n\t\t\t\t\t\"group_name\": \"node_bJOfkAaAtKkdlaN\",\n\t\t\t\t\t\"type\": \"UNION\",\n\t\t\t\t\t\"description\": null,\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_EwcJxEdAiXRwFbg\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"node_bJOfkAaAtKkdlaN\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"union\": {\n\t\t\t\t\t\t\t\"complete_schemes_equality\": false\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_EwcJxEdAiXRwFbg\",\n\t\t\t\t\t\"group_name\": null,\n\t\t\t\t\t\"type\": \"GROOVY_JSON\",\n\t\t\t\t\t\"description\": \"{\\\"nodeName\\\":\\\"node_bJOfkAaAtKkdlaN\\\",\\\"parentUuid\\\":\\\"node_bJOfkAaAtKkdlaN\\\"}\",\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [\n\t\t\t\t\t\t\"node_JqKQIzmcQfOKwvC\"\n\t\t\t\t\t],\n\t\t\t\t\t\"display_name\": \"node_bJOfkAaAtKkdlaN\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"input_name\": \"_json_in\",\n\t\t\t\t\t\t\"output_name\": \"_json_out\",\n\t\t\t\t\t\t\"schema_path\": \"http://decision-backend:8080/api/streaming/schema/0752f75f-3d94-478c-8047-31badf27135c\",\n\t\t\t\t\t\t\"script_path\": \"http://decision-backend:8080/api/streaming/text-script/5f55faa0-70e4-4dc6-a887-d0ebb13482a6\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"sinks\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"node_qiQVBMXWZqpEOmj\",\n\t\t\t\t\t\"group_name\": \"node_JqKQIzmcQfOKwvC\",\n\t\t\t\t\t\"type\": \"KAFKA\",\n\t\t\t\t\t\"description\": null,\n\t\t\t\t\t\"parallelism\": null,\n\t\t\t\t\t\"next\": [],\n\t\t\t\t\t\"display_name\": \"node_JqKQIzmcQfOKwvC\",\n\t\t\t\t\t\"debug\": {\n\t\t\t\t\t\t\"enabled\": \"${DEBUG_LOGGER_ENABLED}\",\n\t\t\t\t\t\t\"row_serde\": null\n\t\t\t\t\t},\n\t\t\t\t\t\"config\": {\n\t\t\t\t\t\t\"kafka\": {\n\t\t\t\t\t\t\t\"bootstrap_servers\": \"${KAFKA_SERVERS}\",\n\t\t\t\t\t\t\t\"producer\": {\n\t\t\t\t\t\t\t\t\"topic\": \"${KAFKA_OUTPUT_TOPIC_0c539644-d056-473f-9fdf-f830c90d0d3d}\",\n\t\t\t\t\t\t\t\t\"semantic\": \"AT_LEAST_ONCE\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"properties\": \"${KAFKA_PROPERTIES}\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"properties\": {\n\t\t\t\"public\": {},\n\t\t\t\"secure\": {}\n\t\t},\n\t\t\"name\": \"0c539644-d056-473f-9fdf-f830c90d0d3d\",\n\t\t\"enable_guid_redirection\": true,\n\t\t\"guid_field_name\": \"decision_key\",\n\t\t\"display_name\": \"New Diagram (Mnymv)\",\n\t\t\"error_handling_strategy\": \"LOG_AND_SIDE_OUTPUT\"\n\t}\n}",
+			"createUserId": "826ce1d9-2061-4756-b786-f3416e66bb12",
+			"environmentId": "a0bb1b74-bb05-42a4-9d7d-15b3ae172180",
+			"version": null,
+			"jobId": null,
+			"avroSchema": null,
+			"inTopicName": "decision0c539644-d056-473f-9fdf-f830c90d0d3din.dev",
+			"outTopicName": "decision0c539644-d056-473f-9fdf-f830c90d0d3dout.dev",
+			"rootDeployId": null,
+			"deployStatus": "STOPPED",
+			"deployTopicsStatus": "USED",
+			"deployType": "REALTIME",
+			"errorMessage": null,
+			"initScript": null,
+			"flinkTrackingUrl": null,
+			"isTested": null,
+			"deployConfigurationId": "6dbdba3a-8e01-4808-b89b-91d505bd011a",
+			"offerEnvironments": [],
+			"lastChangeByUser": "826ce1d9-2061-4756-b786-f3416e66bb12",
+			"createByUser": "826ce1d9-2061-4756-b786-f3416e66bb12"
+		}
+	},
+	"diagrams": {
+		"16f33c9d-8d67-41f9-bf84-49366862ca9a": {
+			"diagramWithParameters": {
+				"lifeCycleState": "ACTIVE",
+				"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+				"versionName": null,
+				"versionType": "LATEST",
+				"versionDescription": null,
+				"diagramId": "63e0730c-e0d5-4a08-a6e8-3652e18f2b0a",
+				"diagramNameEntity": {
+					"id": "1c7842e5-c75c-4c66-ada2-0c0e336c8ed8",
+					"objectId": "63e0730c-e0d5-4a08-a6e8-3652e18f2b0a",
+					"objectName": "New Diagram (Mnymv)"
+				},
+				"createDt": 1712327008174,
+				"changeDt": 1712327547476,
+				"lastChangeByUser": "826ce1d9-2061-4756-b786-f3416e66bb12",
+				"createByUser": "826ce1d9-2061-4756-b786-f3416e66bb12",
+				"blockFlag": false,
+				"errorResponseFlag": false,
+				"blockedSessionId": null,
+				"diagramDescription": null,
+				"metaInfo": {
+					"nodeCounter": 3
+				},
+				"inOutParameters": [
+					{
+						"parameterVersionId": "90aad21b-cfbc-4e93-9bef-dc231fc1fc1e",
+						"parameterId": "086a159c-e0ee-4c20-b078-2940e1d47840",
+						"parameterName": "diagram_execute_status",
+						"diagramVersion": {
+							"lifeCycleState": null,
+							"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+							"versionName": null,
+							"versionType": null,
+							"versionDescription": null,
+							"diagramId": null,
+							"diagramNameEntity": null,
+							"createDt": null,
+							"changeDt": null,
+							"lastChangeByUser": null,
+							"createByUser": null,
+							"blockFlag": null,
+							"errorResponseFlag": null,
+							"blockedSessionId": null,
+							"diagramDescription": null,
+							"metaInfo": null,
+							"inOutParameters": null
+						},
+						"diagramVersionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+						"primitiveTypeId": "2",
+						"primitiveType": {
+							"typeId": "2",
+							"typeName": null,
+							"displayName": null,
+							"javaClassName": null,
+							"castToFlink": null,
+							"castToExpression": null,
+							"flinkTypeName": null,
+							"enumTypeName": null,
+							"avroTypeName": null
+						},
+						"complexTypeVersionId": null,
+						"complexTypeVersion": null,
+						"arrayFlag": false,
+						"parameterType": "OUT",
+						"sourceType": "OUTER",
+						"defaultValue": "'0'",
+						"metaInfo": {
+							"orderNum": 0,
+							"isExecuteStatus": true
+						},
+						"typeId": "2"
+					},
+					{
+						"parameterVersionId": "e1f13fd6-fb8b-429d-a113-b9125f209330",
+						"parameterId": "20b8aaf9-7020-445d-aa9b-ae0f2712f873",
+						"parameterName": "test",
+						"diagramVersion": {
+							"lifeCycleState": null,
+							"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+							"versionName": null,
+							"versionType": null,
+							"versionDescription": null,
+							"diagramId": null,
+							"diagramNameEntity": null,
+							"createDt": null,
+							"changeDt": null,
+							"lastChangeByUser": null,
+							"createByUser": null,
+							"blockFlag": null,
+							"errorResponseFlag": null,
+							"blockedSessionId": null,
+							"diagramDescription": null,
+							"metaInfo": null,
+							"inOutParameters": null
+						},
+						"diagramVersionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+						"primitiveTypeId": "1",
+						"primitiveType": {
+							"typeId": "1",
+							"typeName": null,
+							"displayName": null,
+							"javaClassName": null,
+							"castToFlink": null,
+							"castToExpression": null,
+							"flinkTypeName": null,
+							"enumTypeName": null,
+							"avroTypeName": null
+						},
+						"complexTypeVersionId": null,
+						"complexTypeVersion": null,
+						"arrayFlag": false,
+						"parameterType": null,
+						"sourceType": "INNER",
+						"defaultValue": null,
+						"metaInfo": null,
+						"typeId": "1"
+					},
+					{
+						"parameterVersionId": "bf194901-7fa4-4b74-9b06-a28418487395",
+						"parameterId": "ef396877-0699-439e-9ec5-49fd82268bde",
+						"parameterName": "aa",
+						"diagramVersion": {
+							"lifeCycleState": null,
+							"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+							"versionName": null,
+							"versionType": null,
+							"versionDescription": null,
+							"diagramId": null,
+							"diagramNameEntity": null,
+							"createDt": null,
+							"changeDt": null,
+							"lastChangeByUser": null,
+							"createByUser": null,
+							"blockFlag": null,
+							"errorResponseFlag": null,
+							"blockedSessionId": null,
+							"diagramDescription": null,
+							"metaInfo": null,
+							"inOutParameters": null
+						},
+						"diagramVersionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+						"primitiveTypeId": "1",
+						"primitiveType": {
+							"typeId": "1",
+							"typeName": null,
+							"displayName": null,
+							"javaClassName": null,
+							"castToFlink": null,
+							"castToExpression": null,
+							"flinkTypeName": null,
+							"enumTypeName": null,
+							"avroTypeName": null
+						},
+						"complexTypeVersionId": null,
+						"complexTypeVersion": null,
+						"arrayFlag": true,
+						"parameterType": "IN_OUT",
+						"sourceType": "OUTER",
+						"defaultValue": null,
+						"metaInfo": {
+							"orderNum": 1
+						},
+						"typeId": "1"
+					}
+				]
+			},
+			"nodes": [
+				{
+					"nodeId": "c779cd1a-86e9-4e72-826f-cf5198791ec7",
+					"diagramVersion": {
+						"lifeCycleState": null,
+						"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+						"versionName": null,
+						"versionType": null,
+						"versionDescription": null,
+						"diagramId": null,
+						"diagramNameEntity": null,
+						"createDt": null,
+						"changeDt": null,
+						"lastChangeByUser": null,
+						"createByUser": null,
+						"blockFlag": null,
+						"errorResponseFlag": null,
+						"blockedSessionId": null,
+						"diagramDescription": null,
+						"metaInfo": null,
+						"inOutParameters": null
+					},
+					"diagramVersionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+					"nodeTypeId": 2,
+					"nodeName": "Начало_0",
+					"nodeDescription": null,
+					"jsonProperty": {
+						"nodeType": "2",
+						"parallelism": null,
+						"mappingVariables": [
+							{
+								"rowKey": "bc9b95c7-6458-4096-bc23-1b703de5cc5d",
+								"variableName": "aa",
+								"typeId": "1",
+								"isArray": true,
+								"isComplex": false,
+								"isDict": false,
+								"parameterId": "ef396877-0699-439e-9ec5-49fd82268bde"
+							}
+						]
+					},
+					"validState": "VALID",
+					"metaInfo": {
+						"position": {
+							"x": 183,
+							"y": 111.234375
+						},
+						"shape": null,
+						"extent": null,
+						"parentNode": null,
+						"blockInnerMeta": null
+					},
+					"displayType": "Начало"
+				},
+				{
+					"nodeId": "0d831143-3e41-4e7e-a951-5ed9da23ca5b",
+					"diagramVersion": {
+						"lifeCycleState": null,
+						"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+						"versionName": null,
+						"versionType": null,
+						"versionDescription": null,
+						"diagramId": null,
+						"diagramNameEntity": null,
+						"createDt": null,
+						"changeDt": null,
+						"lastChangeByUser": null,
+						"createByUser": null,
+						"blockFlag": null,
+						"errorResponseFlag": null,
+						"blockedSessionId": null,
+						"diagramDescription": null,
+						"metaInfo": null,
+						"inOutParameters": null
+					},
+					"diagramVersionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+					"nodeTypeId": 4,
+					"nodeName": "Чтение данных_2",
+					"nodeDescription": null,
+					"jsonProperty": {
+						"nodeType": "4",
+						"parallelism": null,
+						"dataProviderUuid": "c6a59723-708b-4789-82cb-79b882fd0a5d",
+						"timeout": null,
+						"maxRetries": null,
+						"selectedTableNames": [
+							"address"
+						],
+						"allowMultiResultResponse": false,
+						"outputVariablesMapping": [
+							{
+								"id": "20b8aaf9-7020-445d-aa9b-ae0f2712f873",
+								"rowKey": "36459449-28ea-46d7-a744-bed8500e551e",
+								"variableName": "test",
+								"typeId": "1",
+								"isArray": false,
+								"isComplex": false,
+								"isDict": false,
+								"nodeVariable": "add_id",
+								"externalId": null,
+								"isJdbcArrayKey": false,
+								"arrayVariable": null
+							}
+						],
+						"query": "select  add_id from  address"
+					},
+					"validState": "VALID",
+					"metaInfo": {
+						"position": {
+							"x": 481,
+							"y": 342.234375
+						},
+						"shape": null,
+						"extent": null,
+						"parentNode": null,
+						"blockInnerMeta": null
+					},
+					"displayType": "Чтение данных"
+				},
+				{
+					"nodeId": "329d5e27-6a4d-4c0b-a474-1a2fbea26167",
+					"diagramVersion": {
+						"lifeCycleState": null,
+						"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+						"versionName": null,
+						"versionType": null,
+						"versionDescription": null,
+						"diagramId": null,
+						"diagramNameEntity": null,
+						"createDt": null,
+						"changeDt": null,
+						"lastChangeByUser": null,
+						"createByUser": null,
+						"blockFlag": null,
+						"errorResponseFlag": null,
+						"blockedSessionId": null,
+						"diagramDescription": null,
+						"metaInfo": null,
+						"inOutParameters": null
+					},
+					"diagramVersionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+					"nodeTypeId": 3,
+					"nodeName": "Завершение_1",
+					"nodeDescription": null,
+					"jsonProperty": {
+						"nodeType": "3",
+						"mappingVariables": [
+							{
+								"id": "ef396877-0699-439e-9ec5-49fd82268bde",
+								"rowKey": "04b64a00-0f59-4c64-9dca-bdb140dbb730",
+								"variableName": "aa",
+								"typeId": "1",
+								"isArray": true,
+								"isComplex": false,
+								"isDict": false,
+								"isLiteral": false,
+								"parameter": {
+									"parameterName": "aa",
+									"parameterId": "ef396877-0699-439e-9ec5-49fd82268bde",
+									"isNullValue": false
+								}
+							}
+						]
+					},
+					"validState": "VALID",
+					"metaInfo": {
+						"position": {
+							"x": 1109,
+							"y": 173.234375
+						},
+						"shape": null,
+						"extent": null,
+						"parentNode": null,
+						"blockInnerMeta": null
+					},
+					"displayType": "Завершение"
+				}
+			],
+			"links": [
+				{
+					"linkId": "f2860aaa-cf6b-4ecd-a5e5-6466230ce64f",
+					"diagramVersion": {
+						"lifeCycleState": null,
+						"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+						"versionName": null,
+						"versionType": null,
+						"versionDescription": null,
+						"diagramId": null,
+						"diagramNameEntity": null,
+						"createDt": null,
+						"changeDt": null,
+						"lastChangeByUser": null,
+						"createByUser": null,
+						"blockFlag": null,
+						"errorResponseFlag": null,
+						"blockedSessionId": null,
+						"diagramDescription": null,
+						"metaInfo": null,
+						"inOutParameters": null
+					},
+					"diagramVersionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+					"prevNode": {
+						"nodeId": "c779cd1a-86e9-4e72-826f-cf5198791ec7",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"nodeTypeId": null,
+						"nodeName": null,
+						"nodeDescription": null,
+						"jsonProperty": null,
+						"validState": null,
+						"metaInfo": null,
+						"displayType": null
+					},
+					"prevNodeId": "c779cd1a-86e9-4e72-826f-cf5198791ec7",
+					"nextNode": {
+						"nodeId": "0d831143-3e41-4e7e-a951-5ed9da23ca5b",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"nodeTypeId": null,
+						"nodeName": null,
+						"nodeDescription": null,
+						"jsonProperty": null,
+						"validState": null,
+						"metaInfo": null,
+						"displayType": null
+					},
+					"nextNodeId": "0d831143-3e41-4e7e-a951-5ed9da23ca5b"
+				},
+				{
+					"linkId": "d096a180-f4e8-4d31-a0c9-765373d65683",
+					"diagramVersion": {
+						"lifeCycleState": null,
+						"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+						"versionName": null,
+						"versionType": null,
+						"versionDescription": null,
+						"diagramId": null,
+						"diagramNameEntity": null,
+						"createDt": null,
+						"changeDt": null,
+						"lastChangeByUser": null,
+						"createByUser": null,
+						"blockFlag": null,
+						"errorResponseFlag": null,
+						"blockedSessionId": null,
+						"diagramDescription": null,
+						"metaInfo": null,
+						"inOutParameters": null
+					},
+					"diagramVersionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+					"prevNode": {
+						"nodeId": "0d831143-3e41-4e7e-a951-5ed9da23ca5b",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"nodeTypeId": null,
+						"nodeName": null,
+						"nodeDescription": null,
+						"jsonProperty": null,
+						"validState": null,
+						"metaInfo": null,
+						"displayType": null
+					},
+					"prevNodeId": "0d831143-3e41-4e7e-a951-5ed9da23ca5b",
+					"nextNode": {
+						"nodeId": "329d5e27-6a4d-4c0b-a474-1a2fbea26167",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"nodeTypeId": null,
+						"nodeName": null,
+						"nodeDescription": null,
+						"jsonProperty": null,
+						"validState": null,
+						"metaInfo": null,
+						"displayType": null
+					},
+					"nextNodeId": "329d5e27-6a4d-4c0b-a474-1a2fbea26167"
+				}
+			],
+			"variableAssociations": [
+				{
+					"id": null,
+					"variable": {
+						"parameterVersionId": "bf194901-7fa4-4b74-9b06-a28418487395",
+						"parameterId": "ef396877-0699-439e-9ec5-49fd82268bde",
+						"parameterName": "aa",
+						"diagramVersion": {
+							"lifeCycleState": null,
+							"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+							"versionName": null,
+							"versionType": null,
+							"versionDescription": null,
+							"diagramId": null,
+							"diagramNameEntity": null,
+							"createDt": null,
+							"changeDt": null,
+							"lastChangeByUser": null,
+							"createByUser": null,
+							"blockFlag": null,
+							"errorResponseFlag": null,
+							"blockedSessionId": null,
+							"diagramDescription": null,
+							"metaInfo": null,
+							"inOutParameters": null
+						},
+						"diagramVersionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+						"primitiveTypeId": "1",
+						"primitiveType": {
+							"typeId": "1",
+							"typeName": null,
+							"displayName": null,
+							"javaClassName": null,
+							"castToFlink": null,
+							"castToExpression": null,
+							"flinkTypeName": null,
+							"enumTypeName": null,
+							"avroTypeName": null
+						},
+						"complexTypeVersionId": null,
+						"complexTypeVersion": null,
+						"arrayFlag": true,
+						"parameterType": "IN_OUT",
+						"sourceType": "OUTER",
+						"defaultValue": null,
+						"metaInfo": {
+							"orderNum": 1
+						},
+						"typeId": "1"
+					},
+					"variableId": "bf194901-7fa4-4b74-9b06-a28418487395",
+					"link": {
+						"linkId": "f2860aaa-cf6b-4ecd-a5e5-6466230ce64f",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"prevNode": null,
+						"prevNodeId": null,
+						"nextNode": null,
+						"nextNodeId": null
+					},
+					"linkId": "f2860aaa-cf6b-4ecd-a5e5-6466230ce64f",
+					"calcFlag": true,
+					"typeId": "1"
+				},
+				{
+					"id": null,
+					"variable": {
+						"parameterVersionId": "e1f13fd6-fb8b-429d-a113-b9125f209330",
+						"parameterId": "20b8aaf9-7020-445d-aa9b-ae0f2712f873",
+						"parameterName": "test",
+						"diagramVersion": {
+							"lifeCycleState": null,
+							"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+							"versionName": null,
+							"versionType": null,
+							"versionDescription": null,
+							"diagramId": null,
+							"diagramNameEntity": null,
+							"createDt": null,
+							"changeDt": null,
+							"lastChangeByUser": null,
+							"createByUser": null,
+							"blockFlag": null,
+							"errorResponseFlag": null,
+							"blockedSessionId": null,
+							"diagramDescription": null,
+							"metaInfo": null,
+							"inOutParameters": null
+						},
+						"diagramVersionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+						"primitiveTypeId": "1",
+						"primitiveType": {
+							"typeId": "1",
+							"typeName": null,
+							"displayName": null,
+							"javaClassName": null,
+							"castToFlink": null,
+							"castToExpression": null,
+							"flinkTypeName": null,
+							"enumTypeName": null,
+							"avroTypeName": null
+						},
+						"complexTypeVersionId": null,
+						"complexTypeVersion": null,
+						"arrayFlag": false,
+						"parameterType": null,
+						"sourceType": "INNER",
+						"defaultValue": null,
+						"metaInfo": null,
+						"typeId": "1"
+					},
+					"variableId": "e1f13fd6-fb8b-429d-a113-b9125f209330",
+					"link": {
+						"linkId": "d096a180-f4e8-4d31-a0c9-765373d65683",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"prevNode": null,
+						"prevNodeId": null,
+						"nextNode": null,
+						"nextNodeId": null
+					},
+					"linkId": "d096a180-f4e8-4d31-a0c9-765373d65683",
+					"calcFlag": true,
+					"typeId": "1"
+				},
+				{
+					"id": null,
+					"variable": {
+						"parameterVersionId": "bf194901-7fa4-4b74-9b06-a28418487395",
+						"parameterId": "ef396877-0699-439e-9ec5-49fd82268bde",
+						"parameterName": "aa",
+						"diagramVersion": {
+							"lifeCycleState": null,
+							"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+							"versionName": null,
+							"versionType": null,
+							"versionDescription": null,
+							"diagramId": null,
+							"diagramNameEntity": null,
+							"createDt": null,
+							"changeDt": null,
+							"lastChangeByUser": null,
+							"createByUser": null,
+							"blockFlag": null,
+							"errorResponseFlag": null,
+							"blockedSessionId": null,
+							"diagramDescription": null,
+							"metaInfo": null,
+							"inOutParameters": null
+						},
+						"diagramVersionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+						"primitiveTypeId": "1",
+						"primitiveType": {
+							"typeId": "1",
+							"typeName": null,
+							"displayName": null,
+							"javaClassName": null,
+							"castToFlink": null,
+							"castToExpression": null,
+							"flinkTypeName": null,
+							"enumTypeName": null,
+							"avroTypeName": null
+						},
+						"complexTypeVersionId": null,
+						"complexTypeVersion": null,
+						"arrayFlag": true,
+						"parameterType": "IN_OUT",
+						"sourceType": "OUTER",
+						"defaultValue": null,
+						"metaInfo": {
+							"orderNum": 1
+						},
+						"typeId": "1"
+					},
+					"variableId": "bf194901-7fa4-4b74-9b06-a28418487395",
+					"link": {
+						"linkId": "d096a180-f4e8-4d31-a0c9-765373d65683",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"prevNode": null,
+						"prevNodeId": null,
+						"nextNode": null,
+						"nextNodeId": null
+					},
+					"linkId": "d096a180-f4e8-4d31-a0c9-765373d65683",
+					"calcFlag": false,
+					"typeId": "1"
+				}
+			]
+		},
+		"d8ce006d-d327-4aa6-8c26-c004e7097cda": {
+			"diagramWithParameters": {
+				"lifeCycleState": "ACTIVE",
+				"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+				"versionName": "v.2024-04-05_17:44:16_deploy",
+				"versionType": "DEPLOYED",
+				"versionDescription": null,
+				"diagramId": "63e0730c-e0d5-4a08-a6e8-3652e18f2b0a",
+				"diagramNameEntity": {
+					"id": "1c7842e5-c75c-4c66-ada2-0c0e336c8ed8",
+					"objectId": "63e0730c-e0d5-4a08-a6e8-3652e18f2b0a",
+					"objectName": "New Diagram (Mnymv)"
+				},
+				"createDt": 1712327008174,
+				"changeDt": 1712328256334,
+				"lastChangeByUser": "826ce1d9-2061-4756-b786-f3416e66bb12",
+				"createByUser": "826ce1d9-2061-4756-b786-f3416e66bb12",
+				"blockFlag": false,
+				"errorResponseFlag": false,
+				"blockedSessionId": null,
+				"diagramDescription": null,
+				"metaInfo": {
+					"nodeCounter": 3
+				},
+				"inOutParameters": [
+					{
+						"parameterVersionId": "9d6fe840-96f6-4d8f-a55a-82ea2705da09",
+						"parameterId": "20b8aaf9-7020-445d-aa9b-ae0f2712f873",
+						"parameterName": "test",
+						"diagramVersion": {
+							"lifeCycleState": null,
+							"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+							"versionName": null,
+							"versionType": null,
+							"versionDescription": null,
+							"diagramId": null,
+							"diagramNameEntity": null,
+							"createDt": null,
+							"changeDt": null,
+							"lastChangeByUser": null,
+							"createByUser": null,
+							"blockFlag": null,
+							"errorResponseFlag": null,
+							"blockedSessionId": null,
+							"diagramDescription": null,
+							"metaInfo": null,
+							"inOutParameters": null
+						},
+						"diagramVersionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+						"primitiveTypeId": "1",
+						"primitiveType": {
+							"typeId": "1",
+							"typeName": null,
+							"displayName": null,
+							"javaClassName": null,
+							"castToFlink": null,
+							"castToExpression": null,
+							"flinkTypeName": null,
+							"enumTypeName": null,
+							"avroTypeName": null
+						},
+						"complexTypeVersionId": null,
+						"complexTypeVersion": null,
+						"arrayFlag": false,
+						"parameterType": null,
+						"sourceType": "INNER",
+						"defaultValue": null,
+						"metaInfo": null,
+						"typeId": "1"
+					},
+					{
+						"parameterVersionId": "6de7cbc4-266b-401d-8ef5-f67da04289a1",
+						"parameterId": "ef396877-0699-439e-9ec5-49fd82268bde",
+						"parameterName": "aa",
+						"diagramVersion": {
+							"lifeCycleState": null,
+							"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+							"versionName": null,
+							"versionType": null,
+							"versionDescription": null,
+							"diagramId": null,
+							"diagramNameEntity": null,
+							"createDt": null,
+							"changeDt": null,
+							"lastChangeByUser": null,
+							"createByUser": null,
+							"blockFlag": null,
+							"errorResponseFlag": null,
+							"blockedSessionId": null,
+							"diagramDescription": null,
+							"metaInfo": null,
+							"inOutParameters": null
+						},
+						"diagramVersionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+						"primitiveTypeId": "1",
+						"primitiveType": {
+							"typeId": "1",
+							"typeName": null,
+							"displayName": null,
+							"javaClassName": null,
+							"castToFlink": null,
+							"castToExpression": null,
+							"flinkTypeName": null,
+							"enumTypeName": null,
+							"avroTypeName": null
+						},
+						"complexTypeVersionId": null,
+						"complexTypeVersion": null,
+						"arrayFlag": true,
+						"parameterType": "IN_OUT",
+						"sourceType": "OUTER",
+						"defaultValue": null,
+						"metaInfo": {
+							"orderNum": 1
+						},
+						"typeId": "1"
+					},
+					{
+						"parameterVersionId": "d28f91b2-0993-4662-ba71-3f556e9690f2",
+						"parameterId": "086a159c-e0ee-4c20-b078-2940e1d47840",
+						"parameterName": "diagram_execute_status",
+						"diagramVersion": {
+							"lifeCycleState": null,
+							"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+							"versionName": null,
+							"versionType": null,
+							"versionDescription": null,
+							"diagramId": null,
+							"diagramNameEntity": null,
+							"createDt": null,
+							"changeDt": null,
+							"lastChangeByUser": null,
+							"createByUser": null,
+							"blockFlag": null,
+							"errorResponseFlag": null,
+							"blockedSessionId": null,
+							"diagramDescription": null,
+							"metaInfo": null,
+							"inOutParameters": null
+						},
+						"diagramVersionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+						"primitiveTypeId": "2",
+						"primitiveType": {
+							"typeId": "2",
+							"typeName": null,
+							"displayName": null,
+							"javaClassName": null,
+							"castToFlink": null,
+							"castToExpression": null,
+							"flinkTypeName": null,
+							"enumTypeName": null,
+							"avroTypeName": null
+						},
+						"complexTypeVersionId": null,
+						"complexTypeVersion": null,
+						"arrayFlag": false,
+						"parameterType": "OUT",
+						"sourceType": "OUTER",
+						"defaultValue": "'0'",
+						"metaInfo": {
+							"orderNum": 0,
+							"isExecuteStatus": true
+						},
+						"typeId": "2"
+					}
+				]
+			},
+			"nodes": [
+				{
+					"nodeId": "e7448d42-ab62-4037-a353-4dbe5c8ae957",
+					"diagramVersion": {
+						"lifeCycleState": null,
+						"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+						"versionName": null,
+						"versionType": null,
+						"versionDescription": null,
+						"diagramId": null,
+						"diagramNameEntity": null,
+						"createDt": null,
+						"changeDt": null,
+						"lastChangeByUser": null,
+						"createByUser": null,
+						"blockFlag": null,
+						"errorResponseFlag": null,
+						"blockedSessionId": null,
+						"diagramDescription": null,
+						"metaInfo": null,
+						"inOutParameters": null
+					},
+					"diagramVersionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+					"nodeTypeId": 3,
+					"nodeName": "Завершение_1",
+					"nodeDescription": null,
+					"jsonProperty": {
+						"nodeType": "3",
+						"mappingVariables": [
+							{
+								"id": "ef396877-0699-439e-9ec5-49fd82268bde",
+								"rowKey": "04b64a00-0f59-4c64-9dca-bdb140dbb730",
+								"variableName": "aa",
+								"typeId": "1",
+								"isArray": true,
+								"isComplex": false,
+								"isDict": false,
+								"isLiteral": false,
+								"parameter": {
+									"parameterName": "aa",
+									"parameterId": "ef396877-0699-439e-9ec5-49fd82268bde",
+									"isNullValue": false
+								}
+							}
+						]
+					},
+					"validState": "VALID",
+					"metaInfo": {
+						"position": {
+							"x": 1109,
+							"y": 173.234375
+						},
+						"shape": null,
+						"extent": null,
+						"parentNode": null,
+						"blockInnerMeta": null
+					},
+					"displayType": "Завершение"
+				},
+				{
+					"nodeId": "280e2aa9-dcf7-4c24-ab91-a49ffb079ea5",
+					"diagramVersion": {
+						"lifeCycleState": null,
+						"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+						"versionName": null,
+						"versionType": null,
+						"versionDescription": null,
+						"diagramId": null,
+						"diagramNameEntity": null,
+						"createDt": null,
+						"changeDt": null,
+						"lastChangeByUser": null,
+						"createByUser": null,
+						"blockFlag": null,
+						"errorResponseFlag": null,
+						"blockedSessionId": null,
+						"diagramDescription": null,
+						"metaInfo": null,
+						"inOutParameters": null
+					},
+					"diagramVersionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+					"nodeTypeId": 4,
+					"nodeName": "Чтение данных_2",
+					"nodeDescription": null,
+					"jsonProperty": {
+						"nodeType": "4",
+						"parallelism": null,
+						"dataProviderUuid": "c6a59723-708b-4789-82cb-79b882fd0a5d",
+						"timeout": null,
+						"maxRetries": null,
+						"selectedTableNames": [
+							"address"
+						],
+						"allowMultiResultResponse": false,
+						"outputVariablesMapping": [
+							{
+								"id": "20b8aaf9-7020-445d-aa9b-ae0f2712f873",
+								"rowKey": "36459449-28ea-46d7-a744-bed8500e551e",
+								"variableName": "test",
+								"typeId": "1",
+								"isArray": false,
+								"isComplex": false,
+								"isDict": false,
+								"nodeVariable": "add_id",
+								"externalId": null,
+								"isJdbcArrayKey": false,
+								"arrayVariable": null
+							}
+						],
+						"query": "select  add_id from  address"
+					},
+					"validState": "VALID",
+					"metaInfo": {
+						"position": {
+							"x": 481,
+							"y": 342.234375
+						},
+						"shape": null,
+						"extent": null,
+						"parentNode": null,
+						"blockInnerMeta": null
+					},
+					"displayType": "Чтение данных"
+				},
+				{
+					"nodeId": "08ffe0d0-8d07-4204-b1ea-cf2aa600fda3",
+					"diagramVersion": {
+						"lifeCycleState": null,
+						"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+						"versionName": null,
+						"versionType": null,
+						"versionDescription": null,
+						"diagramId": null,
+						"diagramNameEntity": null,
+						"createDt": null,
+						"changeDt": null,
+						"lastChangeByUser": null,
+						"createByUser": null,
+						"blockFlag": null,
+						"errorResponseFlag": null,
+						"blockedSessionId": null,
+						"diagramDescription": null,
+						"metaInfo": null,
+						"inOutParameters": null
+					},
+					"diagramVersionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+					"nodeTypeId": 2,
+					"nodeName": "Начало_0",
+					"nodeDescription": null,
+					"jsonProperty": {
+						"nodeType": "2",
+						"parallelism": null,
+						"mappingVariables": [
+							{
+								"rowKey": "bc9b95c7-6458-4096-bc23-1b703de5cc5d",
+								"variableName": "aa",
+								"typeId": "1",
+								"isArray": true,
+								"isComplex": false,
+								"isDict": false,
+								"parameterId": "ef396877-0699-439e-9ec5-49fd82268bde"
+							}
+						]
+					},
+					"validState": "VALID",
+					"metaInfo": {
+						"position": {
+							"x": 183,
+							"y": 111.234375
+						},
+						"shape": null,
+						"extent": null,
+						"parentNode": null,
+						"blockInnerMeta": null
+					},
+					"displayType": "Начало"
+				}
+			],
+			"links": [
+				{
+					"linkId": "0c6678e3-3fea-4264-ad2a-08ae440457b2",
+					"diagramVersion": {
+						"lifeCycleState": null,
+						"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+						"versionName": null,
+						"versionType": null,
+						"versionDescription": null,
+						"diagramId": null,
+						"diagramNameEntity": null,
+						"createDt": null,
+						"changeDt": null,
+						"lastChangeByUser": null,
+						"createByUser": null,
+						"blockFlag": null,
+						"errorResponseFlag": null,
+						"blockedSessionId": null,
+						"diagramDescription": null,
+						"metaInfo": null,
+						"inOutParameters": null
+					},
+					"diagramVersionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+					"prevNode": {
+						"nodeId": "08ffe0d0-8d07-4204-b1ea-cf2aa600fda3",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"nodeTypeId": null,
+						"nodeName": null,
+						"nodeDescription": null,
+						"jsonProperty": null,
+						"validState": null,
+						"metaInfo": null,
+						"displayType": null
+					},
+					"prevNodeId": "08ffe0d0-8d07-4204-b1ea-cf2aa600fda3",
+					"nextNode": {
+						"nodeId": "280e2aa9-dcf7-4c24-ab91-a49ffb079ea5",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"nodeTypeId": null,
+						"nodeName": null,
+						"nodeDescription": null,
+						"jsonProperty": null,
+						"validState": null,
+						"metaInfo": null,
+						"displayType": null
+					},
+					"nextNodeId": "280e2aa9-dcf7-4c24-ab91-a49ffb079ea5"
+				},
+				{
+					"linkId": "563713ec-cd7b-49bd-bc2a-a6a0b9534044",
+					"diagramVersion": {
+						"lifeCycleState": null,
+						"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+						"versionName": null,
+						"versionType": null,
+						"versionDescription": null,
+						"diagramId": null,
+						"diagramNameEntity": null,
+						"createDt": null,
+						"changeDt": null,
+						"lastChangeByUser": null,
+						"createByUser": null,
+						"blockFlag": null,
+						"errorResponseFlag": null,
+						"blockedSessionId": null,
+						"diagramDescription": null,
+						"metaInfo": null,
+						"inOutParameters": null
+					},
+					"diagramVersionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+					"prevNode": {
+						"nodeId": "280e2aa9-dcf7-4c24-ab91-a49ffb079ea5",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"nodeTypeId": null,
+						"nodeName": null,
+						"nodeDescription": null,
+						"jsonProperty": null,
+						"validState": null,
+						"metaInfo": null,
+						"displayType": null
+					},
+					"prevNodeId": "280e2aa9-dcf7-4c24-ab91-a49ffb079ea5",
+					"nextNode": {
+						"nodeId": "e7448d42-ab62-4037-a353-4dbe5c8ae957",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"nodeTypeId": null,
+						"nodeName": null,
+						"nodeDescription": null,
+						"jsonProperty": null,
+						"validState": null,
+						"metaInfo": null,
+						"displayType": null
+					},
+					"nextNodeId": "e7448d42-ab62-4037-a353-4dbe5c8ae957"
+				}
+			],
+			"variableAssociations": [
+				{
+					"id": null,
+					"variable": {
+						"parameterVersionId": "6de7cbc4-266b-401d-8ef5-f67da04289a1",
+						"parameterId": "ef396877-0699-439e-9ec5-49fd82268bde",
+						"parameterName": "aa",
+						"diagramVersion": {
+							"lifeCycleState": null,
+							"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+							"versionName": null,
+							"versionType": null,
+							"versionDescription": null,
+							"diagramId": null,
+							"diagramNameEntity": null,
+							"createDt": null,
+							"changeDt": null,
+							"lastChangeByUser": null,
+							"createByUser": null,
+							"blockFlag": null,
+							"errorResponseFlag": null,
+							"blockedSessionId": null,
+							"diagramDescription": null,
+							"metaInfo": null,
+							"inOutParameters": null
+						},
+						"diagramVersionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+						"primitiveTypeId": "1",
+						"primitiveType": {
+							"typeId": "1",
+							"typeName": null,
+							"displayName": null,
+							"javaClassName": null,
+							"castToFlink": null,
+							"castToExpression": null,
+							"flinkTypeName": null,
+							"enumTypeName": null,
+							"avroTypeName": null
+						},
+						"complexTypeVersionId": null,
+						"complexTypeVersion": null,
+						"arrayFlag": true,
+						"parameterType": "IN_OUT",
+						"sourceType": "OUTER",
+						"defaultValue": null,
+						"metaInfo": {
+							"orderNum": 1
+						},
+						"typeId": "1"
+					},
+					"variableId": "6de7cbc4-266b-401d-8ef5-f67da04289a1",
+					"link": {
+						"linkId": "0c6678e3-3fea-4264-ad2a-08ae440457b2",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"prevNode": null,
+						"prevNodeId": null,
+						"nextNode": null,
+						"nextNodeId": null
+					},
+					"linkId": "0c6678e3-3fea-4264-ad2a-08ae440457b2",
+					"calcFlag": true,
+					"typeId": "1"
+				},
+				{
+					"id": null,
+					"variable": {
+						"parameterVersionId": "6de7cbc4-266b-401d-8ef5-f67da04289a1",
+						"parameterId": "ef396877-0699-439e-9ec5-49fd82268bde",
+						"parameterName": "aa",
+						"diagramVersion": {
+							"lifeCycleState": null,
+							"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+							"versionName": null,
+							"versionType": null,
+							"versionDescription": null,
+							"diagramId": null,
+							"diagramNameEntity": null,
+							"createDt": null,
+							"changeDt": null,
+							"lastChangeByUser": null,
+							"createByUser": null,
+							"blockFlag": null,
+							"errorResponseFlag": null,
+							"blockedSessionId": null,
+							"diagramDescription": null,
+							"metaInfo": null,
+							"inOutParameters": null
+						},
+						"diagramVersionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+						"primitiveTypeId": "1",
+						"primitiveType": {
+							"typeId": "1",
+							"typeName": null,
+							"displayName": null,
+							"javaClassName": null,
+							"castToFlink": null,
+							"castToExpression": null,
+							"flinkTypeName": null,
+							"enumTypeName": null,
+							"avroTypeName": null
+						},
+						"complexTypeVersionId": null,
+						"complexTypeVersion": null,
+						"arrayFlag": true,
+						"parameterType": "IN_OUT",
+						"sourceType": "OUTER",
+						"defaultValue": null,
+						"metaInfo": {
+							"orderNum": 1
+						},
+						"typeId": "1"
+					},
+					"variableId": "6de7cbc4-266b-401d-8ef5-f67da04289a1",
+					"link": {
+						"linkId": "563713ec-cd7b-49bd-bc2a-a6a0b9534044",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"prevNode": null,
+						"prevNodeId": null,
+						"nextNode": null,
+						"nextNodeId": null
+					},
+					"linkId": "563713ec-cd7b-49bd-bc2a-a6a0b9534044",
+					"calcFlag": false,
+					"typeId": "1"
+				},
+				{
+					"id": null,
+					"variable": {
+						"parameterVersionId": "9d6fe840-96f6-4d8f-a55a-82ea2705da09",
+						"parameterId": "20b8aaf9-7020-445d-aa9b-ae0f2712f873",
+						"parameterName": "test",
+						"diagramVersion": {
+							"lifeCycleState": null,
+							"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+							"versionName": null,
+							"versionType": null,
+							"versionDescription": null,
+							"diagramId": null,
+							"diagramNameEntity": null,
+							"createDt": null,
+							"changeDt": null,
+							"lastChangeByUser": null,
+							"createByUser": null,
+							"blockFlag": null,
+							"errorResponseFlag": null,
+							"blockedSessionId": null,
+							"diagramDescription": null,
+							"metaInfo": null,
+							"inOutParameters": null
+						},
+						"diagramVersionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+						"primitiveTypeId": "1",
+						"primitiveType": {
+							"typeId": "1",
+							"typeName": null,
+							"displayName": null,
+							"javaClassName": null,
+							"castToFlink": null,
+							"castToExpression": null,
+							"flinkTypeName": null,
+							"enumTypeName": null,
+							"avroTypeName": null
+						},
+						"complexTypeVersionId": null,
+						"complexTypeVersion": null,
+						"arrayFlag": false,
+						"parameterType": null,
+						"sourceType": "INNER",
+						"defaultValue": null,
+						"metaInfo": null,
+						"typeId": "1"
+					},
+					"variableId": "9d6fe840-96f6-4d8f-a55a-82ea2705da09",
+					"link": {
+						"linkId": "563713ec-cd7b-49bd-bc2a-a6a0b9534044",
+						"diagramVersion": null,
+						"diagramVersionId": null,
+						"prevNode": null,
+						"prevNodeId": null,
+						"nextNode": null,
+						"nextNodeId": null
+					},
+					"linkId": "563713ec-cd7b-49bd-bc2a-a6a0b9534044",
+					"calcFlag": true,
+					"typeId": "1"
+				}
+			]
+		}
+	},
+	"dataProviders": {
+		"c6a59723-708b-4789-82cb-79b882fd0a5d": {
+			"sourceId": "c6a59723-708b-4789-82cb-79b882fd0a5d",
+			"description": "description",
+			"sourceName": "KI_test_pg_local",
+			"sourceTypeId": "ed6a4480-3b85-40c9-b628-6394cd336308",
+			"sourceType": {
+				"id": "ed6a4480-3b85-40c9-b628-6394cd336308",
+				"typeName": "POSTGRES",
+				"connectionType": "JDBC",
+				"tablesQuery": null,
+				"urlMask": null,
+				"driverClass": null,
+				"userType": false,
+				"sdiEnabled": true,
+				"sdeEnabled": true
+			},
+			"createDt": 1652685742293,
+			"changeDt": 1669866988611,
+			"lastChangeByUser": "80ad2144-548f-4c08-8f18-07ee2de9b7f0",
+			"createByUser": "58b5bd5c-b349-49d3-87c3-186f1b7f6230",
+			"settings": [
+				{
+					"sourceSettingsId": "f6993c25-7478-4f5e-9e47-09e6d54a60a9",
+					"serverName": "10.22.0.36",
+					"hosts": null,
+					"port": "32303",
+					"username": "postgres",
+					"password": "xL5OgWyPwD6m8PIx2wSn4dfR18Xq5+9X4Q19WeYogAx3XHpz8bBEJAaFhk1p5vEj",
+					"zookeeperQuorum": null,
+					"zookeeperZnodeParent": null,
+					"additionalProperties": null,
+					"additionalSettings": [],
+					"environmentSettingsId": "a0bb1b74-bb05-42a4-9d7d-15b3ae172180",
+					"scheme": null,
+					"database": "test",
+					"inputType": "parameters",
+					"url": "jdbc:postgresql://10.22.0.36:32303/test?",
+					"token": null,
+					"dataProvider": {
+						"sourceId": "c6a59723-708b-4789-82cb-79b882fd0a5d",
+						"description": null,
+						"sourceName": null,
+						"sourceTypeId": null,
+						"sourceType": null,
+						"createDt": null,
+						"changeDt": null,
+						"lastChangeByUser": null,
+						"createByUser": null,
+						"settings": null
+					}
+				}
+			]
+		}
+	},
+	"dataProviderToDiagramRelations": {
+		"9e24925e-48c3-451a-9f64-b481d621a99c": {
+			"id": "9e24925e-48c3-451a-9f64-b481d621a99c",
+			"toKey": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+			"relationType": "INCLUDE",
+			"nodeId": "0d831143-3e41-4e7e-a951-5ed9da23ca5b",
+			"node": {
+				"nodeId": "0d831143-3e41-4e7e-a951-5ed9da23ca5b",
+				"diagramVersion": null,
+				"diagramVersionId": null,
+				"nodeTypeId": null,
+				"nodeName": null,
+				"nodeDescription": null,
+				"jsonProperty": null,
+				"validState": null,
+				"metaInfo": null,
+				"displayType": null
+			},
+			"fromKey": "c6a59723-708b-4789-82cb-79b882fd0a5d",
+			"toEntity": {
+				"lifeCycleState": null,
+				"versionId": "16f33c9d-8d67-41f9-bf84-49366862ca9a",
+				"versionName": null,
+				"versionType": null,
+				"versionDescription": null,
+				"diagramId": null,
+				"diagramNameEntity": null,
+				"createDt": null,
+				"changeDt": null,
+				"lastChangeByUser": null,
+				"createByUser": null,
+				"blockFlag": null,
+				"errorResponseFlag": null,
+				"blockedSessionId": null,
+				"diagramDescription": null,
+				"metaInfo": null,
+				"inOutParameters": null
+			},
+			"fromEntity": {
+				"sourceId": "c6a59723-708b-4789-82cb-79b882fd0a5d",
+				"description": null,
+				"sourceName": null,
+				"sourceTypeId": null,
+				"sourceType": null,
+				"createDt": null,
+				"changeDt": null,
+				"lastChangeByUser": null,
+				"createByUser": null,
+				"settings": null
+			}
+		},
+		"8367d3c4-8ec8-4130-b024-f123a8160960": {
+			"id": "8367d3c4-8ec8-4130-b024-f123a8160960",
+			"toKey": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+			"relationType": "INHERITED_VERSION",
+			"nodeId": "280e2aa9-dcf7-4c24-ab91-a49ffb079ea5",
+			"node": {
+				"nodeId": "280e2aa9-dcf7-4c24-ab91-a49ffb079ea5",
+				"diagramVersion": null,
+				"diagramVersionId": null,
+				"nodeTypeId": null,
+				"nodeName": null,
+				"nodeDescription": null,
+				"jsonProperty": null,
+				"validState": null,
+				"metaInfo": null,
+				"displayType": null
+			},
+			"fromKey": "c6a59723-708b-4789-82cb-79b882fd0a5d",
+			"toEntity": {
+				"lifeCycleState": null,
+				"versionId": "d8ce006d-d327-4aa6-8c26-c004e7097cda",
+				"versionName": null,
+				"versionType": null,
+				"versionDescription": null,
+				"diagramId": null,
+				"diagramNameEntity": null,
+				"createDt": null,
+				"changeDt": null,
+				"lastChangeByUser": null,
+				"createByUser": null,
+				"blockFlag": null,
+				"errorResponseFlag": null,
+				"blockedSessionId": null,
+				"diagramDescription": null,
+				"metaInfo": null,
+				"inOutParameters": null
+			},
+			"fromEntity": {
+				"sourceId": "c6a59723-708b-4789-82cb-79b882fd0a5d",
+				"description": null,
+				"sourceName": null,
+				"sourceTypeId": null,
+				"sourceType": null,
+				"createDt": null,
+				"changeDt": null,
+				"lastChangeByUser": null,
+				"createByUser": null,
+				"settings": null
+			}
+		}
+	},
+	"rootIdsAndDescriptions": {
+		"16f33c9d-8d67-41f9-bf84-49366862ca9a": {
+			"0c539644-d056-473f-9fdf-f830c90d0d3d": "New Diagram (Mnymv) (v.2024-04-05_17:44:16_deploy)"
+		},
+		"c6a59723-708b-4789-82cb-79b882fd0a5d": {
+			"0c539644-d056-473f-9fdf-f830c90d0d3d": "New Diagram (Mnymv) (v.2024-04-05_17:44:16_deploy)"
+		},
+		"d8ce006d-d327-4aa6-8c26-c004e7097cda": {
+			"0c539644-d056-473f-9fdf-f830c90d0d3d": "New Diagram (Mnymv) (v.2024-04-05_17:44:16_deploy)"
+		},
+		"0c539644-d056-473f-9fdf-f830c90d0d3d": {
+			"0c539644-d056-473f-9fdf-f830c90d0d3d": "New Diagram (Mnymv) (v.2024-04-05_17:44:16_deploy)"
+		}
+	},
+	"schemas": [
+		{
+			"schemaId": "ce56a889-68ff-4a16-b708-0e59b6f04757",
+			"schemaText": "{\"type\":\"record\",\"name\":\"root\",\"fields\":[{\"name\":\"aa\",\"type\":{\"type\":\"array\",\"items\":[\"null\",\"int\"]}}]}",
+			"deployId": "0c539644-d056-473f-9fdf-f830c90d0d3d"
+		},
+		{
+			"schemaId": "5ed1a6c9-b3ba-4fab-b661-ee5549d469f6",
+			"schemaText": "{\"type\":\"record\",\"name\":\"root\",\"fields\":[{\"name\":\"aa\",\"type\":{\"type\":\"array\",\"items\":[\"null\",\"int\"]}},{\"name\":\"test\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"decision_key\",\"type\":[\"null\",\"string\"],\"default\":null}]}",
+			"deployId": "0c539644-d056-473f-9fdf-f830c90d0d3d"
+		},
+		{
+			"schemaId": "0752f75f-3d94-478c-8047-31badf27135c",
+			"schemaText": "{\"type\":\"record\",\"name\":\"root\",\"fields\":[{\"name\":\"aa\",\"type\":{\"type\":\"array\",\"items\":[\"null\",\"int\"]}},{\"name\":\"diagram_execute_status\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"errorTrace\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"decision_key\",\"type\":[\"null\",\"string\"],\"default\":null}]}",
+			"deployId": "0c539644-d056-473f-9fdf-f830c90d0d3d"
+		}
+	],
+	"textScripts": [
+		{
+			"scriptId": "a3c6be34-876d-4b61-af97-163f57a59e00",
+			"scriptText": "import static com.glowbyte.decision.GroovyDecisionFunction.*\nimport com.google.gson.Gson\nimport com.google.gson.GsonBuilder\nimport groovy.json.JsonSlurper\n\ndef _object= new JsonSlurper().parseText(_json_in)\nclass MapDecisionExtension {\n    static <K, V> V getWithReplaceNull(Map<K, V> map, K key, V defaultValue) {\n        if (!map.containsKey(key) || map.get(key) == null) {\n            map.put(key, defaultValue)\n        }\n        return map.get(key)\n    }\n}\nuse(MapDecisionExtension) { varI14MYPkhY23xWh40c -> \n\n}\n_json_out = new GsonBuilder().serializeNulls().setDateFormat(\"yyyy-MM-dd\").create().toJson(_object)",
+			"scriptType": "GROOVY",
+			"deployId": "0c539644-d056-473f-9fdf-f830c90d0d3d"
+		},
+		{
+			"scriptId": "5f55faa0-70e4-4dc6-a887-d0ebb13482a6",
+			"scriptText": "import com.google.gson.Gson\nimport com.google.gson.GsonBuilder\nimport groovy.json.JsonSlurper\n\nimport static com.glowbyte.decision.GroovyDecisionFunction.*\n\ndef _object= new JsonSlurper().parseText(_json_in)\ntry {\n_object.aa = null\n}catch(Exception ex) {\n_object.aa = null\n_object.errorTrace += ex.getMessage()\n}\ntry {\n_object.diagram_execute_status = '0'\n}catch(Exception ex) {\n_object.diagram_execute_status = null\n_object.errorTrace += ex.getMessage()\n}\n_json_out = new GsonBuilder().serializeNulls().setDateFormat(\"yyyy-MM-dd\").create().toJson(_object)",
+			"scriptType": "GROOVY",
+			"deployId": "0c539644-d056-473f-9fdf-f830c90d0d3d"
+		}
+	]
+}
